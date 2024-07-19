@@ -60,7 +60,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="bg-red-400 w-full">
+    <nav className="bg-red-400 w-full fixed z-50">
       <div className="flex items-center justify-between h-20 px-4">
         <div className="logo w-1/6 ">
           <Image src="Logo.svg" alt="Logo" width={116} height={48} priority />
