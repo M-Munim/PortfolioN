@@ -75,7 +75,7 @@ const Nav = () => {
           </div>
           <div className="btn">
             <button className="btnBlue">
-              <Link href="/contact">Contact</Link>
+              <Link href="#contact">Contact</Link>
             </button>
           </div>
         </div>
