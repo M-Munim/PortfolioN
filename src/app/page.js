@@ -6,7 +6,7 @@ import { IoLogoLinkedin } from "react-icons/io5";
 import { HiOutlineMail } from "react-icons/hi";
 
 // data
-import { about, testimonials } from "./data";
+import { about, projects, testimonials } from "./data";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -16,13 +16,21 @@ import 'swiper/css/pagination';
 import 'swiper/css/bundle';
 import { Navigation, Pagination, A11y, Keyboard } from 'swiper/modules';
 
+import Link from 'next/link';
+import { useState } from 'react';
+
 export default function Home() {
+  const [showAll, setShowAll] = useState(false);
+
+  const toggleShow = () => {
+    setShowAll(!showAll);
+  };
 
   return (
     <main className=''>
 
       {/* hero */}
-      <section className="home bg-orange-700 w-full pt-36 pb-5">
+      <section className="home bg-orange-700 w-full pt-24 pb-5" id='home'>
         <div className="w-10/12 m-auto">
           <div className="text-white relative py-5">
 
@@ -45,7 +53,7 @@ export default function Home() {
       </section>
 
       {/* about */}
-      <section className="about bg-green-700 w-full py-5">
+      <section className="about bg-green-700 w-full py-5 pt-24" id='about'>
         <div className="w-10/12 m-auto">
           <div className="heading bg-red flex items-center justify-center gap-3  mb-10">
             <h2 className="nanum mb-0 relative">About <Image src="/Underline1.svg" className="absolute bottom-2 right-0" alt="Fire" width={105} height={19} /></h2>
@@ -91,7 +99,7 @@ export default function Home() {
       </section>
 
       {/* Work */}
-      <section className="work-approach bg-yellow-700 w-full py-5">
+      <section className="work-approach bg-yellow-700 w-full py-5 pt-20" id='work'>
         <div className="w-10/12 m-auto">
           <div className="top h-96 bg-purple-100">
             <div className="heading bg-red flex items-center justify-center gap-3 mb-10">
@@ -100,7 +108,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="bottom bg-green-800">
+          <div className="bottom ">
             <div className="heading bg-red flex items-center justify-center gap-3 mb-10 bg-red-200">
               <h2 className="nanum mb-0 relative">My Approach<Image src="/Underline1.svg" className="absolute -bottom-1 right-0" alt="Fire" width={155} height={19} /></h2>
               <Image src="/Fire.svg" alt="Fire" width={60} height={60} />
@@ -108,29 +116,29 @@ export default function Home() {
 
             <div className="relative flex flex-col bg-yellow-800">
               <Image src="/Frame.svg" alt="Frame" width={120} height={138} className="absolute top-16 left-16" />
-              <div className="w-full border-b-2 relative overflow-hidden h-[410px]">
-                <div className="w-80 h-80 rounded-full border border-dashed absolute -bottom-40 left-1/4"></div>
-                <div className="w-[500px] h-[500px] rounded-full border border-dashed absolute -bottom-64 left-1/4"></div>
-                <div className="w-[750px] h-[750px] rounded-full border border-dashed absolute -bottom-[355px] left-1/4"></div>
+              <div className="w-full border-b-2 relative overflow-hidden h-[440px]">
+                <div className="w-80 h-80 rounded-full border border-dashed absolute -bottom-40 left-[17%]"></div>
+                <div className="w-[620px] h-[620px] rounded-full border border-dashed absolute -bottom-[325px] left-[17%]"></div>
+                <div className="w-[850px] h-[850px] rounded-full border border-dashed absolute -bottom-[420px] left-[17%]"></div>
               </div>
 
-              <div className="cards flex items-center justify-end gap-4 mt-5 bg-green-200 w-full text-white">
+              <div className="cards flex items-center justify-end gap-4 mt-2 bg-green-200 w-full text-white">
                 <div className="w-72 h-80 bg-red-950 rounded-2xl p-3 flex items-center justify-center">
                   <div className="">
-                    <h2 className="">Planning & Strategy</h2>
+                    <h2 className="font-bold">Planning & Strategy</h2>
                     <p className="">We'll colaborate to map out your website's goal, target audience and key functionalities. We'll discuss things like site structure, navigation and content requirements.</p>
                   </div>
                 </div>
 
                 <div className="w-72 h-80 bg-red-950 rounded-2xl p-3 flex items-center justify-center">
                   <div className="">
-                    <h2 className="">Development & Progress Update</h2>
+                    <h2 className="font-bold">Development & Progress Update</h2>
                     <p className="">Once we agree on the plan, I cue my lofi playlist and dive into coding. From initial sketches to polished code, I keep you updated every step of the way.</p>
                   </div>
                 </div>
                 <div className="w-72  h-80 bg-red-950 rounded-2xl p-3 flex items-center justify-center">
                   <div className="">
-                    <h2 className="">Development & Launch</h2>
+                    <h2 className="font-bold">Development & Launch</h2>
                     <p className="">This is where the magic happens! Based on the approved design, I'll translate everthing into functional code, bulding your website from the ground up.</p>
                   </div>
                 </div>
@@ -148,7 +156,7 @@ export default function Home() {
       </section>
 
       {/* projects */}
-      <section className="Projects bg-orange-700 w-full py-5">
+      <section className="Projects bg-orange-700 w-full py-5 pt-24" id='projects'>
         <div className="w-10/12 m-auto">
           <div className="heading bg-red flex items-center justify-center gap-3  mb-10">
             <h2 className="nanum mb-0 relative">Projects <Image src="/Underline1.svg" className="absolute -bottom-1 right-0" alt="Fire" width={135} height={19} /></h2>
@@ -157,11 +165,37 @@ export default function Home() {
 
           <div className="w-1/2 mb-10">
             <p className="leading-5 text-white opacity-70 text-justify">Following projects showcases my skills and experience<br />  through real world Examples of my work. Each project is<br />  described with links to code repos and live demos in it. It reflects my ability to solve problems, work with different technologies and manage project efficiently.experience in Javascript, and expertise in frameworks like React, Next.js. I am a quick learner and collaborate closely with clients to create efficeint, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life.</p>
-
-            <div className="w-full h-96">
-              projects
+          </div>
+          <div className="w-full bg-yellow-200 flex flex-col items-center justify-center">
+            <div className="flex items-center justify-center gap-2 flex-wrap">
+              {
+                (showAll ? projects : projects.slice(0, 3)).map((projData) => (
+                  <div key={projData.id} className="card bg-pink-700 w-[32%]">
+                    <div className="img">
+                      <Image src={projData.img} alt="Projects" width={392} height={258} className='m-auto' />
+                    </div>
+                    <div className="dets px-6 py-1">
+                      <h2 className="">Pharmapedia Web</h2>
+                      <p className="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, qui!</p>
+                      <a href="">Visit</a>
+                    </div>
+                  </div>
+                ))
+              }
+            </div>
+            <div className="flex items-center justify-center my-6">
+              <button className='btnBlue' onClick={toggleShow}>
+                {showAll ? 'Show Less' : 'Show More'}
+              </button>
             </div>
           </div>
+
+
+
+
+
+
+
         </div>
       </section>
 
@@ -174,7 +208,7 @@ export default function Home() {
       </section>
 
       {/*testimonials*/}
-      <section className="testimonials bg-teal-700 w-full py-5">
+      <section className="testimonials bg-teal-700 w-full py-5 pt-24" id='testimonials'>
         <div className="w-10/12 m-auto">
           <div className="heading bg-red flex items-center justify-center gap-3  mb-20">
             <h2 className="nanum mb-0 relative">Testimonials <Image src="/Underline1.svg" className="absolute -bottom-2 right-1" alt="Fire" width={195} height={19} /></h2>
@@ -229,25 +263,25 @@ export default function Home() {
         </div>
       </section>
       {/* hireme */}
-      <section className="hireme bg-red-700 w-full py-10">
+      <section className="hireme bg-red-700 w-full py-10 pt-28" id='hire-me'>
         <div className="bg-[#6966FF] h-[355px] w-10/12 m-auto rounded-2xl relative flex flex-col items-center justify-center gap-10">
-          <Image src="/Shining stars.svg" alt="ShiningStars" width={66} height={66} className='absolute -top-7 -right-6' />
-          <Image src="/Big Circle.svg" alt="ShiningStars" width={789} height={304} className='absolute' />
-          <h2 className="text-center">Have a project in mind? <br /> Let’s get to work.</h2>
-          <div className="mt-10 flex items-center justify-center gap-3">
-            <button>
-              <a href="">Fiverr</a>
+          <Image src="/Shining stars.svg" alt="ShiningStars" width={66} height={66} className='absolute -top-7 -right-6 z-10' />
+          <Image src="/Big Circle.svg" alt="ShiningStars" width={789} height={304} className='absolute z-10' />
+          <h2 className="text-center text-3xl font-semibold tracking-widest z-20">Have a project in mind? <br /> Let’s get to work.</h2>
+          <div className="mt-10 flex items-center justify-center gap-2 z-20">
+            <button className='btnGreen'>
+              <a href="https://www.fiverr.com/munim_freelance" target='_blank'>Fiverr</a>
             </button>
 
-            <button>
+            <button className='btnGreen'>
               <a href="">UpWork</a>
             </button>
 
-            <button>
+            <button className='btnGreen'>
               <a href="">Toptal</a>
             </button>
 
-            <button>
+            <button className='btnGreen'>
               <a href="">PeoplePerHour</a>
             </button>
           </div>
@@ -263,7 +297,7 @@ export default function Home() {
       </section>
 
       {/* contact */}
-      <section className="contact w-full py-5" >
+      <section className="contact w-full py-5 pt-28" id='contact'>
         <div className="heading bg-red flex items-center justify-center gap-3 mb-14">
           <h2 className="nanum mb-0 relative">Contact Us<Image src="/Underline1.svg" className="absolute -bottom-1 right-0" alt="Fire" width={135} height={19} /></h2>
           <Image src="/Fire.svg" alt="Fire" width={60} height={60} />
@@ -298,6 +332,12 @@ export default function Home() {
               </button>
             </form>
           </div>
+        </div>
+      </section>
+      {/* gap */}
+      <section className="gap  bg-pink-300 w-full">
+        <div className="w-10/12 m-auto h-32 flex items-center justify-start gap-3">
+          <div className="w-full border border-dashed"></div>
         </div>
       </section>
 

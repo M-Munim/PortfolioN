@@ -60,3 +60,49 @@ export const testimonials = [
     title: 'CEO BizWizards'
   },
 ]
+
+export const projects = [
+  {
+    id: 1,
+    img: '/pharmapedia.png',
+    title: 'Pharmapedia Web',
+    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
+    link: '',
+  }, {
+    id: 1,
+    img: '/pharmapedia.png',
+    title: 'Pharmapedia Web',
+    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
+    link: '',
+  }, {
+    id: 2,
+    img: '/pharmapedia.png',
+    title: 'Pharmapedia Web',
+    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
+    link: '',
+  }, {
+    id: 3,
+    img: '/pharmapedia.png',
+    title: 'Pharmapedia Web',
+    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
+    link: '',
+  }, {
+    id: 4,
+    img: '/pharmapedia.png',
+    title: 'Pharmapedia Web',
+    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
+    link: '',
+  }, {
+    id: 5,
+    img: '/pharmapedia.png',
+    title: 'Pharmapedia Web',
+    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
+    link: '',
+  }, {
+    id: 6,
+    img: '/pharmapedia.png',
+    title: 'Pharmapedia Web',
+    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
+    link: '',
+  },
+]

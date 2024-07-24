@@ -36,8 +36,21 @@ body {
   height: 52px;
 }
 
-.nanum{
+.nanum {
   font-family: "Nanum Pen Script", cursive;
   color: white;
   font-size: 3.3rem;
+}
+
+
+.btnGreen {
+  background: green;
+  color: white;
+  width: 130px;
+  height: 48px;
+  border-radius: 7.29px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, width 0.3s ease, height 0.3s ease;
 }

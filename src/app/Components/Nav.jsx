@@ -63,13 +63,17 @@ const Nav = () => {
     <nav className="bg-red-400 w-full fixed z-50">
       <div className="flex items-center justify-between h-20 px-4">
         <div className="logo w-1/6 ">
-          <Image src="Logo.svg" alt="Logo" width={116} height={48} priority />
+          <Link href='#home' >  
+            <Image src="Logo.svg" alt="Logo" width={116} height={48} priority />
+          </Link>
         </div>
         <div className="hidden md:flex items-center justify-end gap-5 w-5/6">
           <div className="links text-white flex items-center gap-5 capitalize">
-            {['/', '/about', '/work', '/projects', '/testimonials', '/hire-me'].map((href, index) => (
+            {['#home', '#about', '#work', '#projects', '#testimonials', '#hire-me'].map((href, index) => (
               <motion.div key={index} variants={linkVariants} whileHover="hover">
-                <Link href={href}>{href.substring(1) || 'Home'}</Link>
+                <a href={href}>
+                  {href.substring(1) || 'Home'}
+                </a>
               </motion.div>
             ))}
           </div>
