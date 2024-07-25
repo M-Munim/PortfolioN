@@ -60,7 +60,7 @@ const Nav = () => {
   };
 
   return (
-    <nav className="bg-red-400 w-full fixed z-50">
+    <nav className="bg-[#252536] w-full fixed z-50">
       <div className="flex items-center justify-between h-20 px-4">
         <div className="logo w-1/6 ">
           <Link href='#home' >  

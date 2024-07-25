@@ -45,8 +45,8 @@ const Footer = () => {
             <Image src="/Logo.svg" alt="Logo" width={116} height={48} priority />
           </div>
 
-          <div className="flex md:flex-col flex-row items-center justify-center gap-4 md:gap-0 md:w-1/3 space-y-1 capitalize">
-            {['/', '/about', '/work', '/hire-me', '/projects', '/testimonials'].map((href, index) => (
+          <div className="flex md:flex-col flex-row items-center justify-center gap-3 md:gap-0 md:w-1/3 space-y-1 capitalize">
+            {['/', '/about', '/work', '/hire me', '/projects', '/testimonials'].map((href, index) => (
               <motion.div key={index} variants={linkVariants} whileHover="hover">
                 <Link href={href}>{href.substring(1) || 'Home'}</Link>
               </motion.div>
