@@ -14,6 +14,11 @@ export const about = [
     img: '/graphics.png',
     title: 'Logo Designing',
   },
+  {
+    id: 4,
+    img: '/graphics.png',
+    title: 'Google Sites',
+  },
 ]
 
 export const testimonials = [
@@ -34,21 +39,21 @@ export const testimonials = [
   {
     id: 3,
     img: '/profile.png',
-    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
+    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic. vvit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
     name: "Eng Abdul Mohiz",
     title: 'CEO TeachRica | COO Encoder Bytes'
   },
   {
     id: 4,
     img: '/profile.png',
-    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
+    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.it amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.it amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
     name: "Aqleem Orakzai",
     title: 'MERN Stack Trainer SMIT'
   },
   {
     id: 5,
     img: '/profile.png',
-    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
+    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti',
     name: "Baber",
     title: 'Web Dev Trainer Navttc'
   },
@@ -70,40 +75,52 @@ export const projects = [
     link: '',
   }, {
     id: 2,
-    img: '/pharmapedia.png',
-    title: 'Pharmapedia Web',
+    img: '/kisanHTML.png',
+    title: 'Green Pakistan Kisan Rehbar',
     msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
-    link: '',
+    link: 'https://encoderbytes.github.io/plantationSIte/',
   }, {
     id: 3,
-    img: '/pharmapedia.png',
-    title: 'Pharmapedia Web',
+    img: '/HOSPITAL.png',
+    title: 'Premier Healthcare Services',
     msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
-    link: '',
+    link: 'https://m-munim.github.io/HospitalSiteScss/',
   }, {
     id: 4,
-    img: '/pharmapedia.png',
-    title: 'Pharmapedia Web',
+    img: '/eblearninglabProj.png',
+    title: 'Eb Learning Lab',
     msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
-    link: '',
+    link: 'https://eblearninglab.com/',
   }, {
     id: 5,
-    img: '/pharmapedia.png',
-    title: 'Pharmapedia Web',
+    img: '/MAHAZ.png',
+    title: 'Mahaz Edu System',
     msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
-    link: '',
+    link: 'https://m-munim.github.io/Mahaz-Educa-Systems-Pak/',
   }, {
     id: 6,
-    img: '/pharmapedia.png',
-    title: 'Pharmapedia Web',
+    img: '/dietmate.png',
+    title: 'Dietmate AI',
     msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
     link: '',
   }, {
     id: 7,
-    img: '/pharmapedia.png',
-    title: 'Pharmapedia Web',
+    img: '/Poha.png',
+    title: 'POHA',
     msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
     link: '',
+  }, {
+    id: 8,
+    img: '/realState.png',
+    title: 'Real State Site',
+    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
+    link: 'https://react-real-state-site.vercel.app/',
+  }, {
+    id: 9,
+    img: '/FoodUI.png',
+    title: 'Food Delivery UI',
+    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
+    link: 'https://foodelivery-ui.vercel.app/',
   },
 ]
 
@@ -153,5 +170,5 @@ export const experiences = [
       "Acquired basic knowledge and hands - on experience with React JS.",
     ],
   },
-  
+
 ];
