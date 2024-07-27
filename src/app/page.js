@@ -6,7 +6,7 @@ import { IoLogoLinkedin } from "react-icons/io5";
 import { HiOutlineMail } from "react-icons/hi";
 
 // data
-import { about, experiences, projects, testimonials } from "./data";
+import { about, balls, experiences, projects, testimonials } from "./data";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -153,7 +153,7 @@ export default function Home() {
       {/* Work */}
       <section className="work-approach bg-[#252536] w-full py-5 pt-20" id='work' >
         <div className="w-10/12 m-auto">
-          <div className="top">
+          <div className="top mb-10">
             <div className="heading bg-red flex items-center justify-center gap-3 mb-10">
               <h2 className="nanum mb-0 relative">Work <Image src="/Underline1.svg" className="absolute bottom-2 right-0" alt="Fire" width={105} height={19} /></h2>
               <Image src="/Fire.svg" alt="Fire" width={60} height={60} />
@@ -213,9 +213,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="w-10/12 m-auto bg-red-50 py-5 flex items-center justify-center gap-x-6 flex-wrap gap-y-3">
-            <div className="bg-red-800 h-24 w-24 rounded-full"></div>
-            
+          <div className="w-10/12 m-auto py-5 flex items-center justify-center gap-x-6 flex-wrap gap-y-3">
+            {balls.map((images) => (
+              <div className="h-24 w-24 rounded-full flex items-center justify-center" key={images.id}>
+                <Image src={images.img} alt="AboutImg" width={100} height={126} className='w-full' />
+              </div>
+            ))}
           </div>
 
           <div className="bottom mt-20">
@@ -356,7 +359,7 @@ export default function Home() {
             <Image src='/navttc.png' width={92} height={92} alt="companies" className='' />
             <Image src='/teachRica.svg' width={92} height={92} alt="companies" className='' />
             <Image src='/smit.png' width={92} height={92} alt="companies" className='' />
-            <Image src='/eblearninglab.png' width={92} height={92} alt="companies" className='hover:bg-white p-1' />
+            <Image src='/eblearninglab.png' width={92} height={92} alt="companies" className='' />
           </div>
         </div>
       </section >

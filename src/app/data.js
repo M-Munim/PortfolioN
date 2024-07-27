@@ -25,42 +25,43 @@ export const testimonials = [
   {
     id: 1,
     img: '/profile.png',
-    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
+    msg: "Munim's innovative approach and technical skills have greatly improved our web applications. He is a key player in our development team.",
     name: 'mian jawad ahmad',
     title: 'CEO Encoder Bytes Pvt Ltd'
+
   },
   {
     id: 2,
     img: '/profile.png',
-    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
+    msg: "Munim's dedication and proficiency as a web developer have significantly enhanced our online presence. His innovative solutions and teamwork are invaluable.",
     name: "Muhammad Umair Ahmad",
-    title: 'Founder & CEO CoDev'
+    title: 'Founder & CEO CoDev | MERN Stack Trainer'
   },
   {
     id: 3,
     img: '/profile.png',
-    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic. vvit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
+    msg: 'His consistently delivers high-quality work on time. His expertise in front-end development has greatly benefited our projects. A true asset to the team.',
     name: "Eng Abdul Mohiz",
     title: 'CEO TeachRica | COO Encoder Bytes'
   },
   {
     id: 4,
     img: '/profile.png',
-    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.it amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.it amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
+    msg: 'He has demonstrated exceptional skill and dedication in his role as a web developer. His commitment to excellence is evident in every project.',
     name: "Aqleem Orakzai",
     title: 'MERN Stack Trainer SMIT'
   },
   {
     id: 5,
     img: '/profile.png',
-    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti',
+    msg: "Munim's growth as a front- end web developer has been impressive.He is quick to learn and applies new skills effectively in real - world projects.",
     name: "Baber",
     title: 'Web Dev Trainer Navttc'
   },
   {
     id: 6,
     img: '/profile.png',
-    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
+    msg: 'A blend of creativity and technical proficiency. His contributions as a web developer have been crucial to our digital strategy.',
     name: "Abdul Mohaimen",
     title: 'CEO BizWizards'
   },
@@ -172,3 +173,60 @@ export const experiences = [
   },
 
 ];
+
+export const balls = [
+  {
+    id: 1,
+    img: "/pngwing.png",
+  },
+  {
+    id: 2,
+    img: "/pngwing.com (1).png",
+  },
+  {
+    id: 3,
+    img: "/pngwing.com (2).png",
+  },
+  {
+    id: 4,
+    img: "/pngwing.com (4).png",
+  }, {
+    id: 5,
+    img: "/pngwing.com (5).png",
+  }, {
+    id: 6,
+    img: "/pngwing.com (6).png",
+  }, {
+    id: 7,
+    img: "/nexy.png",
+  }, {
+    id: 8,
+    img: "/pngwing.com (8).png",
+  }, {
+    id: 9,
+    img: "/pngwing.com (9).png",
+  }, {
+    id: 10,
+    img: "/pngwing.com (10).png",
+  },
+  {
+    id: 11,
+    img: "/pngwing.com (11).png",
+  },
+  {
+    id: 12,
+    img: "/pngwing.com (12).png",
+  },
+  {
+    id: 13,
+    img: "/pngwing.com (13).png",
+  },
+  {
+    id: 14,
+    img: "/pngwing.com (14).png",
+  },
+  {
+    id: 15,
+    img: "/pngwing.com (3).png",
+  },
+]
