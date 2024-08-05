@@ -50,8 +50,7 @@ export default function Home() {
                     duration: .6,
                     type: "spring"
                   }}
-                  className="font-bold text-[80px]"
-                >HI, I am <span className="text-[#6966FF] relative">Munim <Image src="/Sparkle.svg" alt="Logo" width={82} height={80} className="absolute -right-12 -top-5" /></span></motion.h1>
+                  className="font-bold text-6xl md:text-[80px]">HI, I am <span className="text-[#6966FF] relative text-7xl md:text-[95px]">Munim <Image src="/Sparkle.svg" alt="Logo" width={100} height={100} className="absolute w-16 md:w-[80px] h-16 md:h-[82px] -right-12 -top-5" /></span></motion.h1>
 
                 <motion.p initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -59,8 +58,8 @@ export default function Home() {
                     duration: 1.5,
                     delay: 0.5
                   }}
-                  className="text-4xl"
-                >I develop user interfaces and web<br />applications using <span className="relative">React-Js and Next-Js<Image src="/Vector.svg" alt="Logo" width={368} height={25} className="absolute right-0 -bottom-7" /></span></motion.p>
+                  className="sm:text-2xl md:text-3xl lg:text-4xl"
+                >I develop user interfaces and web<br />applications using <span className="relative">React-Js and Next-Js.<Image src="/Vector.svg" alt="Logo" width={368} height={25} className="absolute right-0 -bottom-7" /></span></motion.p>
               </div>
             </div>
 
@@ -71,7 +70,7 @@ export default function Home() {
             transition={{
               duration: 1.5,
               delay: 0.5
-            }} className="flex items-center w-8/12 m-auto justify-end -mt-14 pb-14">
+            }} className="flex items-center w-8/12 m-auto justify-end md:-mt-10 pb-14">
             <Image src="/bg_main (1).png" alt="Logo" width={516} height={480} />
           </motion.div>
 
@@ -104,15 +103,15 @@ export default function Home() {
       </section>
 
       {/* about */}
-      <section className="about bg-[#252536] w-full py-5 pt-24" id='about'>
+      <section className="about bg-[#252536] w-full pt-24" id='about'>
         <div className="w-10/12 m-auto">
-          <div className="heading bg-red flex items-center justify-center gap-3 mb-10">
+          <div className="heading bg-red flex items-center justify-center gap-3 mb-5 md:mb-10">
             <h2 className="nanum mb-0 relative">About <Image src="/Underline1.svg" className="absolute bottom-2 right-0" alt="Fire" width={105} height={19} /></h2>
             <Image src="/Fire.svg" alt="Fire" width={60} height={60} />
           </div>
 
-          <div className="w-5/12 mb-10">
-            <p className="leading-5 text-white opacity-70 text-justify">I'am a skilled front-end developer with experience in Javascript, and expertise in frameworks like React, Next.js. I am a quick learner and collaborate closely with clients to create efficeint, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life.</p>
+          <div className="w-full lg:w-7/12 mb-10">
+            <p className="leading-5 text-white opacity-70 text-justify text-sm md:text-base">I'am a skilled front-end developer with experience in Javascript, and expertise in frameworks like React, Next.js. I am a quick learner and collaborate closely with clients to create efficeint, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life.</p>
 
             <div className="links flex items-center justify-start text-2xl gap-2 mt-3 text-white">
               <a href="https://www.linkedin.com/in/muhammad-munim1" target='_blank' className='hover:scale-110 transition-all'>
@@ -132,9 +131,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex justify-center items-center gap-5">
+          <div className="flex justify-center items-center gap-5 flex-wrap">
             {about.map((aboutData) => (
-              <div className="flex flex-col items-center justify-around text-white w-80 border h-80 cursor-pointer shadow-sm shadow-white hover:scale-95 transition-all" key={aboutData.id}>
+              <div className="flex flex-col items-center justify-around text-white w-80 md:w-72 lg:w-80 border h-80 md:h-72 lg:h-80 cursor-pointer shadow-sm shadow-white hover:scale-95 transition-all" key={aboutData.id}>
                 <Image src={aboutData.img} alt="AboutImg" width={245} height={126} />
                 <h2 className="">{aboutData.title}</h2>
               </div>
@@ -152,18 +151,17 @@ export default function Home() {
 
       {/* Work */}
       <section className="work-approach bg-[#252536] w-full py-5 pt-20" id='work' >
-        <div className="w-10/12 m-auto">
+        <div className="w-11/12 lg:w-10/12 m-auto">
           <div className="top mb-10">
             <div className="heading bg-red flex items-center justify-center gap-3 mb-10">
               <h2 className="nanum mb-0 relative">Work <Image src="/Underline1.svg" className="absolute bottom-2 right-0" alt="Fire" width={105} height={19} /></h2>
               <Image src="/Fire.svg" alt="Fire" width={60} height={60} />
             </div>
 
-            <div className=" w-full flex items-center justify-center">
+            {/* <div className="w-full flex items-center justify-center">
               <div className="flex justify-center items-centerd py-5 text-white">
                 <div className="flex items-stretch space-x-4">
-                  {/* Left Column */}
-                  <div className="flex flex-col space-y-20 pb-5">
+                  <div className="flex flex-col space-y-20 pb-5 bg-green-400">
                     {experiences
                       .filter(card => card.position === 'left')
                       .map(card => (
@@ -183,11 +181,9 @@ export default function Home() {
                       ))}
                   </div>
 
-                  {/* Vertical Line */}
                   <div className="w-[2px] rounded-xl bg-gray-300"></div>
-
-                  {/* Right Column */}
-                  <div className="flex flex-col space-y-20">
+        
+                  <div className="flex flex-col space-y-20 bg-orange-400">
                     {experiences
                       .filter(card => card.position === 'right')
                       .map(card => (
@@ -210,12 +206,12 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
-          <div className="w-10/12 m-auto py-5 flex items-center justify-center gap-x-6 flex-wrap gap-y-3">
+          <div className="w-11/12 md:w-10/12 m-auto py-5 flex items-center justify-center gap-x-4 md:gap-x-6 flex-wrap gap-y-3">
             {balls.map((images) => (
-              <div className="h-24 w-24 rounded-full flex items-center justify-center" key={images.id}>
+              <div className="h-12 md:h-24 w-12 md:w-24 rounded-full flex items-center justify-center" key={images.id}>
                 <Image src={images.img} alt="AboutImg" width={100} height={126} className='w-full' />
               </div>
             ))}
@@ -227,29 +223,31 @@ export default function Home() {
               <Image src="/Fire.svg" alt="Fire" width={60} height={60} />
             </div>
 
-            <div className="relative flex flex-col">
-              <Image src="/Frame.svg" alt="Frame" width={120} height={138} className="absolute top-16 left-16" />
-              <div className="w-full border-b-2 relative overflow-hidden h-[440px]">
-                <div className="w-80 h-80 rounded-full border border-dashed absolute -bottom-40 left-[17%]"></div>
-                <div className="w-[620px] h-[620px] rounded-full border border-dashed absolute -bottom-[325px] left-[17%]"></div>
-                <div className="w-[850px] h-[850px] rounded-full border border-dashed absolute -bottom-[420px] left-[17%]"></div>
-              </div>
+            <div className="flex flex-col">
 
-              <div className="cards flex items-center justify-end gap-4 mt-2 w-full text-white">
-                <div className="w-[300px] h-80 bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all border-b-2 p-3 flex items-center justify-center">
+              <div className="cards flex items-center justify-center gap-x-4 w-full text-white flex-wrap mt-2">
+                <div className="w-[340px] h-72 bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all border-b-2 p-3 flex items-center justify-center">
                   <div className="">
                     <h2 className="font-bold text-xl mb-5">Planning & Strategy</h2>
                     <p className="text-sm text-justify">We'll colaborate to map out your website's goal, target audience and key functionalities. We'll discuss things like site structure, navigation and content requirements.</p>
                   </div>
                 </div>
 
-                <div className="w-[300px] h-80 bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all border-b-2 p-3 flex items-center justify-center">
+                <Image src="/Frame.svg" alt="Frame" width={90} height={118} className="mt-5 block me-auto sm:hidden" />
+                <div className="w-[340px] h-72 bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all border-b-2 p-3 flex items-center justify-center">
                   <div className="">
                     <h2 className="font-bold text-xl mb-5">Development & Updates</h2>
                     <p className="text-sm text-justify">Once we agree on the plan, I cue my lofi playlist and dive into problem solving & coding. From initial sketches to polished code, I keep you updated every step of the way.</p>
                   </div>
                 </div>
-                <div className="w-[300px] h-80 bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all border-b-2 p-3 flex items-center justify-center">
+                <Image
+                  src="/Frame.svg"
+                  alt="Frame"
+                  width={90}
+                  height={118}
+                  className="transform scale-x-[-1] block ms-auto mt-5 sm:hidden"
+                />
+                <div className="w-[340px] h-72 bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all border-b-2 p-3 flex items-center justify-center mt-3">
                   <div className="">
                     <h2 className="font-bold text-xl mb-5">Development & Launch</h2>
                     <p className="text-sm text-justify">This is where the magic happens! Based on the approved design, I'll translate everthing into functional code, bulding your website from the ground up.</p>
@@ -276,23 +274,23 @@ export default function Home() {
             <Image src="/Fire.svg" alt="Fire" width={60} height={60} />
           </div>
 
-          <div className="w-5/12 mb-10">
+          <div className="w-full lg:w-7/12 mb-10">
             <p className="leading-5 text-white opacity-70 text-justify">Following projects showcases my skills and experience through real world Examples of my work. Each project is described with links to code repos and live demos in it. It reflects my ability to solve problems, work with different technologies and manage project efficiently.experience in Javascript, and expertise in frameworks like React, Next.js. I am a quick learner and collaborate closely with clients to create efficeint, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life.</p>
           </div>
           <div className="w-full flex flex-col items-center justify-center">
             <div className="flex items-center justify-center gap-3 flex-wrap">
               {
                 (showAll ? projects : projects.slice(0, 6)).map((projData) => (
-                  <div key={projData.id} className="card text-white w-[32%] h-96 bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all mb-3">
+                  <div key={projData.id} className="card text-white w-[340px] md:w-[310px] lg:w-[270px] h-auto bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all mb-3">
                     <div className="img">
                       <a href={projData.link} target='_blank'>
                         <Image src={projData.img} alt="Projects" width={392} height={258} className='m-auto' loading='lazy' />
                       </a>
                     </div>
                     <div className="dets px-3 py-1 mt-4">
-                      <h2 className="text-xl font-semibold leading-5 mb-4">{projData.title}</h2>
-                      <p className="text-sm text-justify leading-4 mb-1">{projData.msg}</p>
-                      <a href={projData.link} className='text-xs' target='_blank'>Visit</a>
+                      <h2 className="text-xl md:text-lg lg:text-base xl:text-xl font-semibold leading-5 mb-4">{projData.title}</h2>
+                      <p className="text-xs md:text-xs xl:text-sm text-justify leading-4 mb-1">{projData.msg}</p>
+                      <a href={projData.link} className='text-xs' target='_blank'>Visit Here</a>
                     </div>
                   </div>
                 ))
@@ -316,7 +314,7 @@ export default function Home() {
       </section >
 
       {/*testimonials*/}
-      <section className="testimonials bg-[#252536] w-full py-5 pt-24" id='testimonials' >
+      {/* <section className="testimonials bg-[#252536] w-full py-5 pt-24" id='testimonials' >
         <div className="w-10/12 m-auto">
           <div className="heading bg-red flex items-center justify-center gap-3  mb-20">
             <h2 className="nanum mb-0 relative">Testimonials <Image src="/Underline1.svg" className="absolute -bottom-2 right-1" alt="Fire" width={195} height={19} /></h2>
@@ -362,7 +360,7 @@ export default function Home() {
             <Image src='/eblearninglab.png' width={92} height={92} alt="companies" className='' />
           </div>
         </div>
-      </section >
+      </section > */}
 
       {/* gap */}
       <section className="gap bg-[#252536] w-full" >
@@ -372,7 +370,7 @@ export default function Home() {
       </section >
 
       {/* hireme */}
-      <section className="hireme bg-[#252536] w-full py-10 pt-28" id='hire-me' >
+      {/* <section className="hireme bg-[#252536] w-full py-10 pt-28" id='hire-me' >
         <div className="bg-[#6966FF] h-[355px] w-10/12 m-auto rounded-2xl relative flex flex-col items-center justify-center gap-10">
           <Image src="/Shining stars.svg" alt="ShiningStars" width={66} height={66} className='absolute -top-7 -right-6 z-10' />
           <Image src="/Big Circle.svg" alt="ShiningStars" width={789} height={304} className='absolute z-10' />
@@ -395,7 +393,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-      </section >
+      </section > */}
 
       {/* gap */}
       <section className="gap bg-[#252536] w-full" >
@@ -406,7 +404,7 @@ export default function Home() {
       </section >
 
       {/* contact */}
-      <section className="contact bg-[#252536] w-full py-5 pt-20" id='contact' >
+      {/* <section className="contact bg-[#252536] w-full py-5 pt-20" id='contact' >
         <div className="heading bg-red flex items-center justify-center gap-3 mb-14">
           <h2 className="nanum mb-0 relative">Contact Me<Image src="/Underline1.svg" className="absolute -bottom-1 right-0" alt="Fire" width={135} height={19} /></h2>
           <Image src="/Fire.svg" alt="Fire" width={60} height={60} />
@@ -442,14 +440,14 @@ export default function Home() {
             </form>
           </div>
         </div>
-      </section >
+      </section > */}
 
       {/* gap */}
-      <section className="gap bg-[#252536] w-full" >
+      {/* <section className="gap bg-[#252536] w-full" >
         <div className="w-10/12 m-auto h-32 flex items-center justify-start gap-3">
           <div className="w-full border border-dashed"></div>
         </div>
-      </section >
+      </section > */}
     </main >
   );
 }

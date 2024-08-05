@@ -58,13 +58,6 @@ export const testimonials = [
     name: "Baber",
     title: 'Web Dev Trainer Navttc'
   },
-  {
-    id: 6,
-    img: '/profile.png',
-    msg: 'A blend of creativity and technical proficiency. His contributions as a web developer have been crucial to our digital strategy.',
-    name: "Abdul Mohaimen",
-    title: 'CEO BizWizards'
-  },
 ]
 
 export const projects = [

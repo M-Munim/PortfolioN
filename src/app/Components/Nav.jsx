@@ -68,7 +68,7 @@ const Nav = () => {
           </Link>
         </div>
         <div className="hidden md:flex items-center justify-end gap-5 w-5/6">
-          <div className="links text-white flex items-center gap-5 capitalize">
+          <div className="links text-white flex items-center gap-4 md:gap-5 capitalize text-[15px] lg:text-lg">
             {['#home', '#about', '#work', '#projects', '#testimonials', '#hire-me'].map((href, index) => (
               <motion.div key={index} variants={linkVariants} whileHover="hover">
                 <a href={href}>
