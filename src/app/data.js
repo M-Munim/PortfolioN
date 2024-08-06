@@ -12,19 +12,19 @@ export const about = [
   {
     id: 3,
     img: '/graphics.png',
-    title: 'Logo Designing',
-  },
-  {
-    id: 4,
-    img: '/graphics.png',
     title: 'Google Sites',
   },
+  // {
+  //   id: 4,
+  //   img: '/graphics.png',
+  //   title: 'Logo Designing',
+  // },
 ]
 
 export const testimonials = [
   {
     id: 1,
-    img: '/profile.png',
+    img: '/sir Jawad.jpg',
     msg: "Munim's innovative approach and technical skills have greatly improved our web applications. He is a key player in our development team.",
     name: 'mian jawad ahmad',
     title: 'CEO Encoder Bytes Pvt Ltd'
@@ -32,32 +32,32 @@ export const testimonials = [
   },
   {
     id: 2,
-    img: '/profile.png',
+    img: '/sir Umair.jpg',
     msg: "Munim's dedication and proficiency as a web developer have significantly enhanced our online presence. His innovative solutions and teamwork are invaluable.",
-    name: "Muhammad Umair Ahmad",
+    name: "M Umair Ahmad",
     title: 'Founder & CEO CoDev | MERN Stack Trainer'
   },
   {
     id: 3,
-    img: '/profile.png',
+    img: '/mohiz.jpg',
     msg: 'His consistently delivers high-quality work on time. His expertise in front-end development has greatly benefited our projects. A true asset to the team.',
     name: "Eng Abdul Mohiz",
     title: 'CEO TeachRica | COO Encoder Bytes'
   },
   {
     id: 4,
-    img: '/profile.png',
+    img: '/sir Aqleem.jpg',
     msg: 'He has demonstrated exceptional skill and dedication in his role as a web developer. His commitment to excellence is evident in every project.',
     name: "Aqleem Orakzai",
     title: 'MERN Stack Trainer SMIT'
   },
-  {
-    id: 5,
-    img: '/profile.png',
-    msg: "Munim's growth as a front- end web developer has been impressive.He is quick to learn and applies new skills effectively in real - world projects.",
-    name: "Baber",
-    title: 'Web Dev Trainer Navttc'
-  },
+  // {
+  //   id: 5,
+  //   img: '/profile.png',
+  //   msg: "Munim's growth as a front- end web developer has been impressive.He is quick to learn and applies new skills effectively in real - world projects.",
+  //   name: "Baber",
+  //   title: 'Web Dev Trainer Navttc'
+  // },
 ]
 
 export const projects = [
@@ -152,7 +152,7 @@ export const experiences = [
   {
     id: 3,
     position: 'left',
-    marginTop: 'mt-0',
+    marginTop: 'mt-10',
     title: "WEB DEVELOPER INTERN",
     company_name: "ENCODER BYTES PVT LTD (PSEB)",
     logo: '/encoderbytes.png',

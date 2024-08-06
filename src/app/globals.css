@@ -15,8 +15,6 @@
   /* color-scheme: dark; */
 }
 
-
-
 body {
   background-color: #232334;
 }
@@ -47,7 +45,7 @@ body {
 
 
 .btnGreen {
-  background: green;
+  background-color: #5754E6;
   color: white;
   width: 130px;
   height: 48px;
@@ -76,6 +74,37 @@ body {
       #000000);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+
+@media only screen and (max-width: 768px) {
+  .btnGreen {
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .btnBlue {
+    width: 115px;
+    height: 40px;
+  }
+  
+  .btnBlue:hover {
+    width: 118px;
+    height: 43px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .btnGreen {
+  
+    width: 90px;
+    height: 40px;
+    font-size: 11px;
+  }
+}
+
+
+
 
 .violet-gradient {
   background: #6966FF;

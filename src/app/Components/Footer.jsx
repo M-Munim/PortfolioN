@@ -42,7 +42,8 @@ const Footer = () => {
       <div className="flex flex-col items-center px-8 py-4">
         <div className="w-full flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
           <div className="flex items-center justify-center md:w-1/3">
-            <Image src="/Logo.svg" alt="Logo" width={116} height={48} priority />
+            {/* <Image src="/Logo.svg" alt="Logo" width={116} height={48} priority /> */}
+            <h2 className="text-white text-4xl tracking-widest"><code className="font-extrabold">MUNIM<small className="font-light text-lg tracking-normal">.dev</small></code></h2>
           </div>
 
           <div className="flex md:flex-col flex-row items-center justify-center gap-x-3 md:w-1/3 space-y-1 capitalize flex-wrap">
@@ -58,15 +59,15 @@ const Footer = () => {
 
             <div className="flex items-center justify-center text-2xl gap-2">
               {[
-                { href: "", icon: <IoLogoLinkedin /> },
-                { href: "", icon: <FaGithub /> },
-                { href: "", icon: <FaInstagram /> },
-                { href: "", icon: <FaSquareXTwitter /> },
-                { href: "", icon: <HiOutlineMail /> },
-                { href: "", icon: <FaSquareWhatsapp /> },
+                { href: "https://www.linkedin.com/in/m-munim1/", icon: <IoLogoLinkedin /> },
+                { href: "https://github.com/M-Munim" , icon: <FaGithub /> },
+                { href: "https://instagram.com/munim_.1?igshid=NGExMmI2YTkyZg==", icon: <FaInstagram /> },
+                { href: "https://twitter.com/Muhamma09747531?t=ifDBNBwXuIEsikE8pQR3YQ&s=09", icon: <FaSquareXTwitter /> },
+                { href: "mailto:muhammadmunimoff330@gmail.com", icon: <HiOutlineMail /> },
+                { href: "https://wa.me/923302021926", icon: <FaSquareWhatsapp /> },
               ]
                 .map((social, index) => (
-                  <motion.a key={index} href={social.href} variants={socialLinkVariants} whileHover="hover">
+                  <motion.a key={index} href={social.href} variants={socialLinkVariants} whileHover="hover"  target="_blank" >
                     {social.icon}
                   </motion.a>
                 ))

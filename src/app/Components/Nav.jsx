@@ -62,9 +62,11 @@ const Nav = () => {
   return (
     <nav className="bg-[#252536] w-full fixed z-50">
       <div className="flex items-center justify-between h-20 px-4">
-        <div className="logo w-1/6 ">
-          <Link href='/' >  
-            <Image src="Logo.svg" alt="Logo" width={116} height={48} priority />
+        <div className="logo w-1/6 flex items-center justify-center ">
+          <Link href='/' >
+            {/* <Image src="Logo.svg" alt="Logo" width={116} height={48} priority /> */}
+            <h2 className="text-[#6966FF] tracking-widest sm:text-xl md:text-2xl lg:text-3xl"><code className="font-extrabold">MUNIM<small className="font-light text-lg tracking-normal text-[9px] sm:text-xs md:text-sm">.dev</small></code></h2>
+
           </Link>
         </div>
         <div className="hidden md:flex items-center justify-end gap-5 w-5/6">
@@ -78,9 +80,11 @@ const Nav = () => {
             ))}
           </div>
           <div className="btn">
-            <button className="btnBlue">
-              <Link href="#contact">Contact</Link>
-            </button>
+            <Link href="#contact">
+              <button className="btnBlue">
+                Contact
+              </button>
+            </Link>
           </div>
         </div>
         <div className="md:hidden">
@@ -121,9 +125,9 @@ const Nav = () => {
             animate="open"
             exit="closed"
             variants={menuVariants}
-            className="md:hidden flex flex-col items-center bg-red-400 py-2"
+            className="md:hidden flex flex-col items-center bg-[#2d2d41] hover:bg-[#2d2d41c3] text-white py-2"
           >
-            {['/', '/about', '/work', '/projects', '/testimonials', '/hire-me', '/contact'].map((href, index) => (
+            {['/', '#about', '#work', '#projects', '#testimonials', '#hire-me', '#contact'].map((href, index) => (
               <Link key={index} href={href} onClick={() => setIsOpen(false)}>
                 {href.substring(1) || 'Home'}
               </Link>

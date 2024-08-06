@@ -114,7 +114,7 @@ export default function Home() {
             <p className="leading-5 text-white opacity-70 text-justify text-sm md:text-base">I'am a skilled front-end developer with experience in Javascript, and expertise in frameworks like React, Next.js. I am a quick learner and collaborate closely with clients to create efficeint, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life.</p>
 
             <div className="links flex items-center justify-start text-2xl gap-2 mt-3 text-white">
-              <a href="https://www.linkedin.com/in/muhammad-munim1" target='_blank' className='hover:scale-110 transition-all'>
+              <a href="https://www.linkedin.com/in/m-munim1/" target='_blank' className='hover:scale-110 transition-all'>
                 <IoLogoLinkedin />
               </a>
               <a href="https://github.com/M-Munim" target='_blank' className='hover:scale-110 transition-all'>
@@ -158,14 +158,15 @@ export default function Home() {
               <Image src="/Fire.svg" alt="Fire" width={60} height={60} />
             </div>
 
-            {/* <div className="w-full flex items-center justify-center">
+            <div className="w-full flex items-center justify-center">
               <div className="flex justify-center items-centerd py-5 text-white">
-                <div className="flex items-stretch space-x-4">
-                  <div className="flex flex-col space-y-20 pb-5 bg-green-400">
+
+                <div className="flex flex-col md:flex-row items-stretch md:space-x-4">
+                  <div className="flex flex-col space-y-20 pb-5 w-full md:w-auto">
                     {experiences
                       .filter(card => card.position === 'left')
                       .map(card => (
-                        <div key={card.id} className={`bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all shadow-md w-[500px] border-b-2 p-6 ${card.marginTop}`}>
+                        <div key={card.id} className={`bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all shadow-md md:w-[360px] lg:w-[470px] border-b-2 p-6 ${card.marginTop}`}>
                           <h2 className="text-xl font-bold mb-2">{card.title}</h2>
                           <div className="flex items-center justify-start gap-2">
                             <p className="opacity-70">{card.company_name}</p>
@@ -181,20 +182,18 @@ export default function Home() {
                       ))}
                   </div>
 
-                  <div className="w-[2px] rounded-xl bg-gray-300"></div>
-        
-                  <div className="flex flex-col space-y-20 bg-orange-400">
+                  <div className="hidden md:block w-[2px] rounded-xl bg-gray-300"></div>
+
+                  <div className="flex flex-col space-y-5 w-full md:w-auto">
                     {experiences
                       .filter(card => card.position === 'right')
                       .map(card => (
-                        <div key={card.id} className={`bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all shadow-md w-[500px] border-b-2 p-6 ${card.marginTop}`}>
+                        <div key={card.id} className={`bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all shadow-md md:w-[360px] lg:w-[470px] mt-0 md:mt-[90%] lg:mt-[50%] border-b-2 p-6`}>
                           <h2 className="text-xl font-bold mb-2">{card.title}</h2>
-                          <div className=" flex items-center justify-start gap-2">
+                          <div className="flex items-center justify-start gap-2">
                             <p className="">{card.company_name}</p>
-
                             <Image src={card.logo} alt="company" width={60} height={60} />
                           </div>
-
                           <ul className='list-disc text-sm mt-2 leading-4 text-justify'>
                             {card.points.map((point, index) => (
                               <li key={index} className='leading-4 mb-2'>{point}</li>
@@ -205,8 +204,9 @@ export default function Home() {
                       ))}
                   </div>
                 </div>
+
               </div>
-            </div> */}
+            </div>
           </div>
 
           <div className="w-11/12 md:w-10/12 m-auto py-5 flex items-center justify-center gap-x-4 md:gap-x-6 flex-wrap gap-y-3">
@@ -224,7 +224,6 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col">
-
               <div className="cards flex items-center justify-center gap-x-4 w-full text-white flex-wrap mt-2">
                 <div className="w-[340px] h-72 bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all border-b-2 p-3 flex items-center justify-center">
                   <div className="">
@@ -281,7 +280,7 @@ export default function Home() {
             <div className="flex items-center justify-center gap-3 flex-wrap">
               {
                 (showAll ? projects : projects.slice(0, 6)).map((projData) => (
-                  <div key={projData.id} className="card text-white w-[340px] md:w-[310px] lg:w-[270px] h-auto bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all mb-3">
+                  <div key={projData.id} className="card text-white w-[340px] md:w-[310px] lg:w-[270px] xl:w-[410px] h-auto bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all mb-3">
                     <div className="img">
                       <a href={projData.link} target='_blank'>
                         <Image src={projData.img} alt="Projects" width={392} height={258} className='m-auto' loading='lazy' />
@@ -314,8 +313,8 @@ export default function Home() {
       </section >
 
       {/*testimonials*/}
-      {/* <section className="testimonials bg-[#252536] w-full py-5 pt-24" id='testimonials' >
-        <div className="w-10/12 m-auto">
+      <section className="testimonials bg-[#252536] w-full py-5 pt-24" id='testimonials' >
+        <div className="w-full lg:w-10/12 m-auto">
           <div className="heading bg-red flex items-center justify-center gap-3  mb-20">
             <h2 className="nanum mb-0 relative">Testimonials <Image src="/Underline1.svg" className="absolute -bottom-2 right-1" alt="Fire" width={195} height={19} /></h2>
             <Image src="/Fire.svg" alt="Fire" width={60} height={60} />
@@ -327,31 +326,34 @@ export default function Home() {
             spaceBetween={50}
             slidesPerView={1}
             keyboard={true}
-            navigation
+            navigation={{
+              nextEl: '.swiper-button-next-custom',
+              prevEl: '.swiper-button-prev-custom'
+            }}
           >
-            {
-              testimonials.map((data) => (
-                <SwiperSlide className='pb-10' key={data.id}>
-                  <div className="w-full md:w-4/6 m-auto">
-                    <div className="flex flex-col items-center justify-center gap-7 md:gap-16 text-white">
-                      <p className="text-center text-sm md:text-base text-t_grey">{data.msg}</p>
-                      <div className="flex justify-center items-center gap-2 w-9/12">
-                        <div className="w-3/12 flex justify-center items-center">
-                          <Image src={data.img} width={92} height={92} alt="Testimonial" />
-                        </div>
-                        <div className="flex flex-col justify-start items-start gap-0 md:gap2 w-9/12">
-                          <h3 className="font-bold text-xl md:text-3xl leading-10 pl-1 capitalize">{data.name}</h3>
-                          <h5 className='ml-1 text-xs mt-1'>{data.title}</h5>
-                        </div>
+            {testimonials.map((data) => (
+              <SwiperSlide className='pb-10' key={data.id}>
+                <div className="w-11/12 md:w-4/6 m-auto">
+                  <div className="flex flex-col items-center justify-center gap-7 md:gap-16 text-white">
+                    <p className="text-center text-xs sm:text-sm md:text-base text-t_grey">{data.msg}</p>
+                    <div className="flex justify-center items-center gap-2 w-9/12">
+                      <div className="w-3/12 flex justify-center items-center">
+                        <Image src={data.img} width={100} height={100} alt="Testimonial" className='w-14 h-14 md:w-24 md:h-24 rounded-full' />
+                      </div>
+                      <div className="flex flex-col justify-start items-start gap-0 md:gap2 w-9/12">
+                        <h3 className="font-bold text-base md:text-2xl lg:text-3xl leading-10 pl-1 capitalize">{data.name}</h3>
+                        <h5 className='ml-1 text-[10px] sm:text-xs mt-0 sm:mt-1'>{data.title}</h5>
                       </div>
                     </div>
                   </div>
-                </SwiperSlide>
-              ))
-            }
+                </div>
+              </SwiperSlide>
+            ))}
+            <div className="swiper-button-next swiper-button-next-custom"></div>
+            <div className="swiper-button-prev swiper-button-prev-custom"></div>
           </Swiper>
 
-          <div className="flex items-center justify-center mt-20 gap-5">
+          <div className="flex items-center justify-center mt-20 gap-5 flex-wrap">
             <Image src='/encoderbytes.png' width={92} height={92} alt="companies" className='' />
             <Image src='/CoDev.png' width={92} height={92} alt="companies" className='' />
             <Image src='/navttc.png' width={92} height={92} alt="companies" className='' />
@@ -360,7 +362,7 @@ export default function Home() {
             <Image src='/eblearninglab.png' width={92} height={92} alt="companies" className='' />
           </div>
         </div>
-      </section > */}
+      </section >
 
       {/* gap */}
       <section className="gap bg-[#252536] w-full" >
@@ -370,12 +372,14 @@ export default function Home() {
       </section >
 
       {/* hireme */}
-      {/* <section className="hireme bg-[#252536] w-full py-10 pt-28" id='hire-me' >
-        <div className="bg-[#6966FF] h-[355px] w-10/12 m-auto rounded-2xl relative flex flex-col items-center justify-center gap-10">
+      <section className="hireme bg-[#252536] w-full py-10 pt-28" id='hire-me' >
+        <div className="bg-[#6966FF] h-[209px] md:h-[334px] lg:h-[354px] w-[85%] md:w-10/12 m-auto rounded-2xl relative flex flex-col items-center justify-center gap-10">
           <Image src="/Shining stars.svg" alt="ShiningStars" width={66} height={66} className='absolute -top-7 -right-6 z-10' />
-          <Image src="/Big Circle.svg" alt="ShiningStars" width={789} height={304} className='absolute z-10' />
-          <h2 className="text-center text-[28px] font-semibold tracking-widest z-20 leading-7 text-white">Have a project in mind? <br />Hire me on my freelance platforms.</h2>
-          <div className="mt-10 flex items-center justify-center gap-2 z-20">
+          <Image src="/Big Circle.svg" alt="ShiningStars" width={889} height={404} className='absolute z-10 hidden md:inline-block' />
+          <h2 className="text-center md:text-2xl lg:text-[32px] font-semibold tracking-widest z-20  md:leading-7 text-white">Have a project in mind? <br />Hire me on my freelance platforms.</h2>
+
+
+          <div className="mt-0 md:mt-10 flex items-center justify-center gap-1 lg:gap-2 z-20 flex-wrap">
             <button className='btnGreen'>
               <a href="https://www.fiverr.com/munim_freelance" target='_blank'>Fiverr</a>
             </button>
@@ -385,7 +389,7 @@ export default function Home() {
             </button>
 
             <button className='btnGreen'>
-              <a href="">Toptal</a>
+              <a href="">Freelancer</a>
             </button>
 
             <button className='btnGreen'>
@@ -393,7 +397,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-      </section > */}
+      </section >
 
       {/* gap */}
       <section className="gap bg-[#252536] w-full" >
@@ -404,14 +408,14 @@ export default function Home() {
       </section >
 
       {/* contact */}
-      {/* <section className="contact bg-[#252536] w-full py-5 pt-20" id='contact' >
+      <section className="contact bg-[#252536] w-full py-5 pt-20" id='contact' >
         <div className="heading bg-red flex items-center justify-center gap-3 mb-14">
           <h2 className="nanum mb-0 relative">Contact Me<Image src="/Underline1.svg" className="absolute -bottom-1 right-0" alt="Fire" width={135} height={19} /></h2>
           <Image src="/Fire.svg" alt="Fire" width={60} height={60} />
         </div>
 
         <div className="w-10/12 m-auto flex flex-col md:flex-row items-center justify-center gap-20">
-          <div className=" w-full md:w-2/3 relative z-30">
+          <div className="w-full md:w-5/6 relative z-30">
             <form action="">
               <div className="flex justify-between items-center gap-2 md:gap-8 mb-4">
                 <div className="flex flex-col items-start justify-center gap-1 w-6/12">
@@ -431,23 +435,23 @@ export default function Home() {
 
               <div className="flex flex-col mb-5">
                 <label htmlFor="message" className='text-sm font-medium leading-6 text-white'>Message</label>
-                <textarea name="message" id="message" className='h-40 w-full rounded-lg p-3 outline-none border-slate-400 border resize-none'></textarea>
+                <textarea name="message" id="message" placeholder='Write your query here...' className='h-40 w-full rounded-lg p-3 outline-none border-slate-400 border resize-none'></textarea>
               </div>
 
               <button className="btnBlue">
-                Send Message
+                Send
               </button>
             </form>
           </div>
         </div>
-      </section > */}
+      </section >
 
       {/* gap */}
-      {/* <section className="gap bg-[#252536] w-full" >
+      <section className="gap bg-[#252536] w-full" >
         <div className="w-10/12 m-auto h-32 flex items-center justify-start gap-3">
           <div className="w-full border border-dashed"></div>
         </div>
-      </section > */}
+      </section >
     </main >
   );
 }
