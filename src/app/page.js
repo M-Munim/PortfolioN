@@ -380,21 +380,29 @@ export default function Home() {
 
 
           <div className="mt-0 md:mt-10 flex items-center justify-center gap-1 lg:gap-2 z-20 flex-wrap">
-            <button className='btnGreen'>
-              <a href="https://www.fiverr.com/munim_freelance" target='_blank'>Fiverr</a>
-            </button>
+            <a href="https://www.fiverr.com/munim_freelance" target='_blank'>
+              <button className='btnGreen'>
+                Fiverr
+              </button>
+            </a>
 
-            <button className='btnGreen'>
-              <a href="">UpWork</a>
-            </button>
+            <a href="https://www.upwork.com/freelancers/~01271fb447d0267f91" target='_blank'>
+              <button className='btnGreen'>
+                UpWork
+              </button>
+            </a>
 
-            <button className='btnGreen'>
-              <a href="">Freelancer</a>
-            </button>
+            <a href="https://www.freelancer.com/u/MMunimm" target='_blank'>
+              <button className='btnGreen'>
+                Freelancer
+              </button>
+            </a>
 
-            <button className='btnGreen'>
-              <a href="">PeoplePerHour</a>
-            </button>
+            <a href="https://www.peopleperhour.com/freelancer/muhammad_munim-bin_sarfaraz-professional-mern-stack-developer-zzqqqmjq" target='_blank'>
+              <button className='btnGreen'>
+                PeoplePerHour
+              </button>
+            </a>
           </div>
         </div>
       </section >

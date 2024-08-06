@@ -127,7 +127,7 @@ const Nav = () => {
             variants={menuVariants}
             className="md:hidden flex flex-col items-center bg-[#2d2d41] hover:bg-[#2d2d41c3] text-white py-2"
           >
-            {['/', '#about', '#work', '#projects', '#testimonials', '#hire-me', '#contact'].map((href, index) => (
+            {['/', '#About', '#Work', '#Projects', '#Testimonials', '#Hire-me', '#Contact'].map((href, index) => (
               <Link key={index} href={href} onClick={() => setIsOpen(false)}>
                 {href.substring(1) || 'Home'}
               </Link>

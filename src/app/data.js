@@ -51,13 +51,13 @@ export const testimonials = [
     name: "Aqleem Orakzai",
     title: 'MERN Stack Trainer SMIT'
   },
-  // {
-  //   id: 5,
-  //   img: '/profile.png',
-  //   msg: "Munim's growth as a front- end web developer has been impressive.He is quick to learn and applies new skills effectively in real - world projects.",
-  //   name: "Baber",
-  //   title: 'Web Dev Trainer Navttc'
-  // },
+    // {
+    //   id: 5,
+    //   img: '/profile.png',
+    //   msg: "Munim's growth as a front- end web developer has been impressive.He is quick to learn and applies new skills effectively in real - world projects.",
+    //   name: "Baber",
+    //   title: 'Web Dev Trainer Navttc'
+    // },
 ]
 
 export const projects = [
@@ -66,7 +66,7 @@ export const projects = [
     img: '/pharmapedia.png',
     title: 'Pharmapedia Web',
     msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
-    link: '',
+    link: 'https://pharmapedia-web.vercel.app/',
   }, {
     id: 2,
     img: '/kisanHTML.png',
@@ -96,7 +96,7 @@ export const projects = [
     img: '/dietmate.png',
     title: 'Dietmate AI',
     msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
-    link: '',
+    link: 'https://diet-ai.vercel.app/',
   }, {
     id: 7,
     img: '/Poha.png',
