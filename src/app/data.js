@@ -157,11 +157,10 @@ export const experiences = [
   {
     id: 3,
     position: 'left',
-    marginTop: 'mt-10',
     title: "WEB DEVELOPER INTERN",
     company_name: "ENCODER BYTES PVT LTD (PSEB)",
     logo: '/encoderbytes.png',
-    date: "Aug 2023 - Nov 2023",
+    date: "Sep 2023 - Nov 2023",
     points: [
       "Developed projects using HTML, CSS, JavaScript, and Bootstrap.",
       "Learned and implemented advanced JavaScript techniques.",

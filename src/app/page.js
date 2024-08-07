@@ -113,28 +113,34 @@ export default function Home() {
       }
     });
 
-    gsap.fromTo(testimonialsSection.current, {
-      opacity: 0,
-      y: 50,
-    }, {
+    gsap.fromTo(testimonialsSection.current,
+
+
+      {
+        opacity: 0,
+        y: -50,
+      }, {
       opacity: 1,
       y: 0,
-      duration: 1,
+      duration: 1.5,
       scrollTrigger: {
         trigger: testimonialsSection.current,
         start: "top 90%",
         end: "bottom 10%",
         toggleActions: "play none none reset",
       }
+
+
+
     });
 
     gsap.fromTo(hireMeSection.current, {
       opacity: 0,
-      y: 50,
+      y: -100,
     }, {
       opacity: 1,
-      y: 0,
-      duration: 1,
+      x: 0,
+      duration: 1.2,
       scrollTrigger: {
         trigger: hireMeSection.current,
         start: "top 90%",
@@ -334,11 +340,11 @@ export default function Home() {
               <div className="flex justify-center items-centerd py-5 text-white">
 
                 <div className="flex flex-col md:flex-row items-stretch md:space-x-4">
-                  <div className="flex flex-col space-y-20 pb-5 w-full md:w-auto">
+                  <div className="flex flex-col space-y-5 pb-5 w-full md:w-auto">
                     {experiences
                       .filter(card => card.position === 'left')
                       .map(card => (
-                        <div key={card.id} className={`bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all shadow-md md:w-[360px] lg:w-[470px] border-b-2 p-6 ${card.marginTop}`}>
+                        <div key={card.id} className={`bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all shadow-md md:w-[360px] lg:w-[470px] border-b-2 p-6 mt-0 md:mt-3`}>
                           <h2 className="text-xl font-bold mb-2">{card.title}</h2>
                           <div className="flex items-center justify-start gap-2">
                             <p className="opacity-70">{card.company_name}</p>
