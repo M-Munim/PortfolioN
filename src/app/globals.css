@@ -87,7 +87,7 @@ body {
     width: 115px;
     height: 40px;
   }
-  
+
   .btnBlue:hover {
     width: 118px;
     height: 43px;
@@ -96,15 +96,18 @@ body {
 
 @media only screen and (max-width: 390px) {
   .btnGreen {
-  
+
     width: 90px;
     height: 40px;
     font-size: 11px;
   }
 }
 
-
-
+@media only screen and (min-width: 430px) {
+  .approachImg {
+    display: none;
+  }
+}
 
 .violet-gradient {
   background: #6966FF;

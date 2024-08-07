@@ -15,7 +15,7 @@ const Nav = () => {
       transition: {
         type: "spring",
         stiffness: 100,
-        damping: 10,
+        damping: 20,
       },
     },
     closed: {
@@ -65,7 +65,7 @@ const Nav = () => {
         <div className="logo w-1/6 flex items-center justify-center ">
           <Link href='/' >
             {/* <Image src="Logo.svg" alt="Logo" width={116} height={48} priority /> */}
-            <h2 className="text-[#6966FF] tracking-widest sm:text-xl md:text-2xl lg:text-3xl"><code className="font-extrabold">MUNIM<small className="font-light text-lg tracking-normal text-[9px] sm:text-xs md:text-sm">.dev</small></code></h2>
+            <h2 className="text-[#6966FF] tracking-widest sm:text-xl md:text-2xl lg:text-3xl"><code className="font-extrabold">MUNIM<small className="font-light text-lg tracking-normal text-[8px] sm:text-xs md:text-sm">.dev</small></code></h2>
 
           </Link>
         </div>
@@ -125,9 +125,9 @@ const Nav = () => {
             animate="open"
             exit="closed"
             variants={menuVariants}
-            className="md:hidden flex flex-col items-center bg-[#2d2d41] hover:bg-[#2d2d41c3] text-white py-2"
+            className="md:hidden flex flex-col items-center bg-[#2d2d41] hover:bg-[#2d2d41c3] text-white py-4 capitalize"
           >
-            {['/', '#About', '#Work', '#Projects', '#Testimonials', '#Hire-me', '#Contact'].map((href, index) => (
+            {['/', '#about', '#work', '#hire me', '#projects', '#testimonials'].map((href, index) => (
               <Link key={index} href={href} onClick={() => setIsOpen(false)}>
                 {href.substring(1) || 'Home'}
               </Link>

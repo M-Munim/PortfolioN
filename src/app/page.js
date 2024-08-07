@@ -18,7 +18,12 @@ import { Navigation, Pagination, A11y, Keyboard } from 'swiper/modules';
 
 import { motion } from "framer-motion";
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import gsap from 'gsap';
+
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
   const [showAll, setShowAll] = useState(false);
@@ -26,6 +31,122 @@ export default function Home() {
   const toggleShow = () => {
     setShowAll(!showAll);
   };
+
+  const gapSection = useRef(null);
+  const aboutSection = useRef(null);
+  const workSection = useRef(null);
+  const projectsSection = useRef(null);
+  const testimonialsSection = useRef(null);
+  const hireMeSection = useRef(null);
+  const contactSection = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(gapSection.current, {
+      opacity: 0,
+      scale: 0.8,
+    }, {
+      opacity: 1,
+      scale: 1,
+      duration: 1,
+      scrollTrigger: {
+        trigger: gapSection.current,
+        start: "top 90%",
+        end: "bottom 10%",
+        toggleActions: "play none none reset",
+      }
+    });
+
+    gsap.fromTo(aboutSection.current, {
+      opacity: 0,
+      x: -100,
+    }, {
+      opacity: 1,
+      x: 0,
+      duration: 1.2,
+      scrollTrigger: {
+        trigger: aboutSection.current,
+        start: "top 90%",
+        end: "bottom 10%",
+        toggleActions: "play none none reset",
+      }
+    });
+
+    gsap.fromTo(workSection.current, {
+      opacity: 0,
+      y: 100,
+    }, {
+      opacity: 1,
+      y: 0,
+      duration: 1.5,
+      scrollTrigger: {
+        trigger: workSection.current,
+        start: "top 90%",
+        end: "bottom 10%",
+        toggleActions: "play none none reset",
+      }
+    });
+
+    gsap.fromTo(projectsSection.current, {
+      opacity: 0,
+      rotateY: 90,
+    }, {
+      opacity: 1,
+      rotateY: 0,
+      duration: 1.3,
+      scrollTrigger: {
+        trigger: projectsSection.current,
+        start: "top 90%",
+        end: "bottom 10%",
+        toggleActions: "play none none reset",
+      }
+    });
+
+    gsap.fromTo(testimonialsSection.current, {
+      opacity: 0,
+      y: 50,
+    }, {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: testimonialsSection.current,
+        start: "top 90%",
+        end: "bottom 10%",
+        toggleActions: "play none none reset",
+      }
+    });
+
+    gsap.fromTo(hireMeSection.current, {
+      opacity: 0,
+      y: 50,
+    }, {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: hireMeSection.current,
+        start: "top 90%",
+        end: "bottom 10%",
+        toggleActions: "play none none reset",
+      }
+    });
+
+    gsap.fromTo(contactSection.current, {
+      opacity: 0,
+      y: -50,
+    }, {
+      opacity: 1,
+      y: 0,
+      duration: 1.5,
+      scrollTrigger: {
+        trigger: contactSection.current,
+        start: "top 90%",
+        end: "bottom 10%",
+        toggleActions: "play none none reset",
+      }
+    });
+  }, []);
+
 
   return (
     <main className=''>
@@ -95,7 +216,7 @@ export default function Home() {
       </section>
 
       {/* gap */}
-      <section className="gap bg-[#252536] w-full">
+      <section ref={gapSection} className="gap bg-[#252536] w-full">
         <div className="w-10/12 m-auto h-32 flex items-center justify-start gap-3">
           <Image src="/Vector2.svg" alt="Vector2" width={30} height={120} />
           <Image src="/pssst!.svg" alt="pssst" width={55} height={26} />
@@ -103,7 +224,7 @@ export default function Home() {
       </section>
 
       {/* about */}
-      <section className="about bg-[#252536] w-full pt-24" id='about'>
+      <section ref={aboutSection} className="about bg-[#252536] w-full pt-24" id='about'>
         <div className="w-10/12 m-auto">
           <div className="heading bg-red flex items-center justify-center gap-3 mb-5 md:mb-10">
             <h2 className="nanum mb-0 relative">About <Image src="/Underline1.svg" className="absolute bottom-2 right-0" alt="Fire" width={105} height={19} /></h2>
@@ -123,8 +244,8 @@ export default function Home() {
               <a href="mailto:muhammadmunimoff330@gmail.com" className='hover:scale-110 transition-all'>
                 <HiOutlineMail />
               </a>
-              <a href="/CV_Me.pdf" target='_blank'>
-                <button className="btnBlue text-base">
+              <a href="/Resume_me.pdf" target='_blank'>
+                <button className="btnBlue text-sm sm:text-base">
                   Download CV
                 </button>
               </a>
@@ -143,14 +264,14 @@ export default function Home() {
       </section >
 
       {/* gap */}
-      <section className="gap bg-[#252536] w-full" >
+      <section ref={gapSection} className="gap bg-[#252536] w-full" >
         <div className="w-10/12 m-auto h-32 flex items-center justify-start gap-3">
           <div className="w-full border border-dashed"></div>
         </div>
       </section >
 
       {/* Work */}
-      <section className="work-approach bg-[#252536] w-full py-5 pt-20" id='work' >
+      <section ref={workSection} className="work-approach bg-[#252536] w-full py-5 pt-20" id='work' >
         <div className="w-11/12 lg:w-10/12 m-auto">
           <div className="top mb-10">
             <div className="heading bg-red flex items-center justify-center gap-3 mb-10">
@@ -225,15 +346,15 @@ export default function Home() {
 
             <div className="flex flex-col">
               <div className="cards flex items-center justify-center gap-x-4 w-full text-white flex-wrap mt-2">
-                <div className="w-[340px] h-72 bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all border-b-2 p-3 flex items-center justify-center">
+                <div className="w-[360px] md:w-[340px] lg:w-[410px] h-72 bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all border-b-2 p-3 flex items-center justify-center mt-3">
                   <div className="">
                     <h2 className="font-bold text-xl mb-5">Planning & Strategy</h2>
                     <p className="text-sm text-justify">We'll colaborate to map out your website's goal, target audience and key functionalities. We'll discuss things like site structure, navigation and content requirements.</p>
                   </div>
                 </div>
 
-                <Image src="/Frame.svg" alt="Frame" width={90} height={118} className="mt-5 block me-auto sm:hidden" />
-                <div className="w-[340px] h-72 bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all border-b-2 p-3 flex items-center justify-center">
+                <Image src="/Frame.svg" alt="Frame" width={90} height={118} className="approachImg mt-5 block me-auto" />
+                <div className="w-[360px] md:w-[340px] lg:w-[410px] h-72 bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all border-b-2 p-3 flex items-center justify-center mt-3">
                   <div className="">
                     <h2 className="font-bold text-xl mb-5">Development & Updates</h2>
                     <p className="text-sm text-justify">Once we agree on the plan, I cue my lofi playlist and dive into problem solving & coding. From initial sketches to polished code, I keep you updated every step of the way.</p>
@@ -244,9 +365,9 @@ export default function Home() {
                   alt="Frame"
                   width={90}
                   height={118}
-                  className="transform scale-x-[-1] block ms-auto mt-5 sm:hidden"
+                  className="approachImg transform scale-x-[-1] block ms-auto mt-5"
                 />
-                <div className="w-[340px] h-72 bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all border-b-2 p-3 flex items-center justify-center mt-3">
+                <div className="w-[360px] md:w-[340px] lg:w-[410px] h-72 bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all border-b-2 p-3 flex items-center justify-center mt-3">
                   <div className="">
                     <h2 className="font-bold text-xl mb-5">Development & Launch</h2>
                     <p className="text-sm text-justify">This is where the magic happens! Based on the approved design, I'll translate everthing into functional code, bulding your website from the ground up.</p>
@@ -259,14 +380,14 @@ export default function Home() {
       </section >
 
       {/* gap */}
-      <section className="gap bg-[#252536] w-full" >
+      <section ref={gapSection} className="gap bg-[#252536] w-full" >
         <div className="w-10/12 m-auto h-32 flex items-center justify-start gap-3">
           <div className="w-full border border-dashed"></div>
         </div>
       </section >
 
       {/* projects */}
-      <section className="Projects bg-[#252536] w-full py-5 pt-24" id='projects' >
+      <section ref={projectsSection} className="Projects bg-[#252536] w-full py-5 pt-24" id='projects' >
         <div className="w-10/12 m-auto">
           <div className="heading bg-red flex items-center justify-center gap-3  mb-10">
             <h2 className="nanum mb-0 relative">Projects <Image src="/Underline1.svg" className="absolute -bottom-1 right-0" alt="Fire" width={135} height={19} /></h2>
@@ -305,7 +426,7 @@ export default function Home() {
       </section >
 
       {/* gap */}
-      <section className="gap bg-[#252536] w-full" >
+      <section ref={gapSection} className="gap bg-[#252536] w-full" >
         <div className="w-10/12 m-auto h-32 flex items-center justify-start gap-3">
           <Image src="/Vector2.svg" alt="Vector2" width={30} height={120} />
           <Image src="/pssst!.svg" alt="pssst" width={55} height={26} />
@@ -313,7 +434,7 @@ export default function Home() {
       </section >
 
       {/*testimonials*/}
-      <section className="testimonials bg-[#252536] w-full py-5 pt-24" id='testimonials' >
+      <section ref={testimonialsSection} className="testimonials bg-[#252536] w-full py-5 pt-24" id='testimonials' >
         <div className="w-full lg:w-10/12 m-auto">
           <div className="heading bg-red flex items-center justify-center gap-3  mb-20">
             <h2 className="nanum mb-0 relative">Testimonials <Image src="/Underline1.svg" className="absolute -bottom-2 right-1" alt="Fire" width={195} height={19} /></h2>
@@ -365,14 +486,14 @@ export default function Home() {
       </section >
 
       {/* gap */}
-      <section className="gap bg-[#252536] w-full" >
+      <section ref={gapSection} className="gap bg-[#252536] w-full" >
         <div className="w-10/12 m-auto h-32 flex items-center justify-start gap-3">
           <div className="w-full border border-dashed"></div>
         </div>
       </section >
 
       {/* hireme */}
-      <section className="hireme bg-[#252536] w-full py-10 pt-28" id='hire-me' >
+      <section ref={hireMeSection} className="hireme bg-[#252536] w-full py-10 pt-28" id='hire-me' >
         <div className="bg-[#6966FF] h-[209px] md:h-[334px] lg:h-[354px] w-[85%] md:w-10/12 m-auto rounded-2xl relative flex flex-col items-center justify-center gap-10">
           <Image src="/Shining stars.svg" alt="ShiningStars" width={66} height={66} className='absolute -top-7 -right-6 z-10' />
           <Image src="/Big Circle.svg" alt="ShiningStars" width={889} height={404} className='absolute z-10 hidden md:inline-block' />
@@ -408,7 +529,7 @@ export default function Home() {
       </section >
 
       {/* gap */}
-      <section className="gap bg-[#252536] w-full" >
+      <section ref={gapSection} className="gap bg-[#252536] w-full" >
         <div className="w-10/12 m-auto h-32 flex items-center justify-start gap-3">
           <Image src="/Vector2.svg" alt="Vector2" width={30} height={120} />
           <Image src="/pssst!.svg" alt="pssst" width={55} height={26} />
@@ -416,7 +537,7 @@ export default function Home() {
       </section >
 
       {/* contact */}
-      <section className="contact bg-[#252536] w-full py-5 pt-20" id='contact' >
+      <section ref={contactSection} className="contact bg-[#252536] w-full py-5 pt-20" id='contact' >
         <div className="heading bg-red flex items-center justify-center gap-3 mb-14">
           <h2 className="nanum mb-0 relative">Contact Me<Image src="/Underline1.svg" className="absolute -bottom-1 right-0" alt="Fire" width={135} height={19} /></h2>
           <Image src="/Fire.svg" alt="Fire" width={60} height={60} />
@@ -455,7 +576,7 @@ export default function Home() {
       </section >
 
       {/* gap */}
-      <section className="gap bg-[#252536] w-full" >
+      <section ref={gapSection} className="gap bg-[#252536] w-full" >
         <div className="w-10/12 m-auto h-32 flex items-center justify-start gap-3">
           <div className="w-full border border-dashed"></div>
         </div>
