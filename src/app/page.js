@@ -32,6 +32,18 @@ export default function Home() {
     setShowAll(!showAll);
   };
 
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+  const [popupData, setPopupData] = useState(null);
+
+  const handleClick = (data) => {
+    setPopupData(data);
+    setIsPopupVisible(true);
+  };
+
+  const handleClosePopup = () => {
+    setIsPopupVisible(false);
+  };
+
   const gapSection = useRef(null);
   const aboutSection = useRef(null);
   const workSection = useRef(null);
@@ -252,13 +264,52 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex justify-center items-center gap-5 flex-wrap">
-            {about.map((aboutData) => (
-              <div className="flex flex-col items-center justify-around text-white w-80 md:w-72 lg:w-80 border h-80 md:h-72 lg:h-80 cursor-pointer shadow-sm shadow-white hover:scale-95 transition-all" key={aboutData.id}>
-                <Image src={aboutData.img} alt="AboutImg" width={245} height={126} />
-                <h2 className="">{aboutData.title}</h2>
+          <div>
+            <div className="flex justify-center items-center gap-5 flex-wrap">
+              {about.map((aboutData) => (
+                <div
+                  className="flex flex-col items-center justify-around text-white w-80 md:w-72 lg:w-80 border h-80 md:h-72 lg:h-80 cursor-pointer shadow-sm shadow-white hover:scale-95 transition-transform"
+                  key={aboutData.id}
+                  onClick={() => handleClick(aboutData)}
+                >
+                  <Image src={aboutData.img} alt="AboutImg" width={245} height={126} />
+                  <h2>{aboutData.title}</h2>
+                </div>
+              ))}
+            </div>
+
+            {isPopupVisible && popupData && (
+              <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 transition-opacity duration-300">
+                <div className="bg-white p-6 rounded-lg w-11/12 max-w-lg relative scale-100 transition-transform duration-300">
+                  <button
+                    className="absolute top-2 right-2 bg-[#6966FF] text-white w-10 rounded-full  p-2 cursor-pointer"
+                    onClick={handleClosePopup}
+                  >
+                    X
+                  </button>
+                  <h2 className="text-lg font-bold mb-4">{popupData.title}</h2>
+                  {/* <Image src={popupData.img} alt="PopupImg" width={100} height={100} /> */}
+                  <p className="text-xs sm:text-sm md:text-base text-justify">{popupData.text}</p>
+
+                  <div className="links flex items-center justify-start text-2xl gap-2 mt-3 text-black">
+                    <a href="https://www.linkedin.com/in/m-munim1/" target='_blank' className='hover:scale-110 transition-all'>
+                      <IoLogoLinkedin />
+                    </a>
+                    <a href="https://github.com/M-Munim" target='_blank' className='hover:scale-110 transition-all'>
+                      <FaGithub />
+                    </a>
+                    <a href="mailto:muhammadmunimoff330@gmail.com" className='hover:scale-110 transition-all'>
+                      <HiOutlineMail />
+                    </a>
+                    <a href="/Resume_me.pdf" target='_blank'>
+                      <button className="btnBlue text-sm sm:text-base">
+                        Download CV
+                      </button>
+                    </a>
+                  </div>
+                </div>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section >
@@ -394,8 +445,8 @@ export default function Home() {
             <Image src="/Fire.svg" alt="Fire" width={60} height={60} />
           </div>
 
-          <div className="w-full lg:w-7/12 mb-10">
-            <p className="leading-5 text-white opacity-70 text-justify">Following projects showcases my skills and experience through real world Examples of my work. Each project is described with links to code repos and live demos in it. It reflects my ability to solve problems, work with different technologies and manage project efficiently.experience in Javascript, and expertise in frameworks like React, Next.js. I am a quick learner and collaborate closely with clients to create efficeint, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life.</p>
+          <div className="w-full lg:w-9/12 mb-10 m-auto">
+            <p className="leading-5 text-white opacity-70 text-center">Following projects showcases my skills and experience through real world Examples of my work. Each project is described with links to code repos and live demos in it.</p>
           </div>
           <div className="w-full flex flex-col items-center justify-center">
             <div className="flex items-center justify-center gap-3 flex-wrap">
@@ -544,7 +595,7 @@ export default function Home() {
         </div>
 
         <div className="w-10/12 m-auto flex flex-col md:flex-row items-center justify-center gap-20">
-          <div className="w-full md:w-5/6 relative z-30">
+          <div className="w-full md:w-4/6 relative z-30">
             <form action="">
               <div className="flex justify-between items-center gap-2 md:gap-8 mb-4">
                 <div className="flex flex-col items-start justify-center gap-1 w-6/12">

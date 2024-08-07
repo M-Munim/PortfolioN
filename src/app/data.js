@@ -2,17 +2,22 @@ export const about = [
   {
     id: 1,
     img: '/front.png',
+    // img: '/web2.png',
+    // img: '/web.png',
     title: 'Front End Development',
+    text: "Website Application Developer with over 1 year of experience, proficient in HTML, CSS, Tailwind CSS, JS, React JS, Redux, Material UI, Shadcn UI, React Bootstrap, Next JS, Firebase, and WordPress.Detail - oriented, quick learner, and eager to contribute to cutting- edge web experiences.Ready to collaborate in crafting appealing, responsive websites with a talented team."
   },
   {
     id: 2,
     img: '/Wp.png',
     title: 'WordPress Development',
+    text: "Website Application Developer with over 1 year of experience, proficient in HTML, CSS, Tailwind CSS, JS, React JS, Redux, Material UI, Shadcn UI, React Bootstrap, Next JS, Firebase, and WordPress.Detail - oriented, quick learner, and eager to contribute to cutting- edge web experiences.Ready to collaborate in crafting appealing, responsive websites with a talented team."
   },
   {
     id: 3,
-    img: '/graphics.png',
+    img: '/cms.png',
     title: 'Google Sites',
+    text: "Website Application Developer with over 1 year of experience, proficient in HTML, CSS, Tailwind CSS, JS, React JS, Redux, Material UI, Shadcn UI, React Bootstrap, Next JS, Google Sites, Firebase, and WordPress.Detail - oriented, quick learner, and eager to contribute to cutting- edge web experiences.Ready to collaborate in crafting appealing, responsive websites with a talented team."
   },
   // {
   //   id: 4,
@@ -51,13 +56,13 @@ export const testimonials = [
     name: "Aqleem Orakzai",
     title: 'MERN Stack Trainer SMIT'
   },
-    // {
-    //   id: 5,
-    //   img: '/profile.png',
-    //   msg: "Munim's growth as a front- end web developer has been impressive.He is quick to learn and applies new skills effectively in real - world projects.",
-    //   name: "Baber",
-    //   title: 'Web Dev Trainer Navttc'
-    // },
+  // {
+  //   id: 5,
+  //   img: '/profile.png',
+  //   msg: "Munim's growth as a front- end web developer has been impressive.He is quick to learn and applies new skills effectively in real - world projects.",
+  //   name: "Baber",
+  //   title: 'Web Dev Trainer Navttc'
+  // },
 ]
 
 export const projects = [
