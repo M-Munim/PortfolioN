@@ -1,7 +1,7 @@
-// // Import the functions you need from the SDKs you need
+
 // import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
-// import { getFirestore } from "firebase/firestore";
+// import { getFirestore, collection, addDoc } from "firebase/firestore"; // <-- Import these functions
 
 // const firebaseConfig = {
 //   apiKey: "AIzaSyAWPmQOiA4eHBCidZQ9HCxOxEkFdTBQUFc",
@@ -18,12 +18,11 @@
 // const analytics = getAnalytics(app);
 // const db = getFirestore(app);
 
-// export { db };
+// export { db, collection, addDoc }; 
 
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getFirestore, collection, addDoc } from "firebase/firestore"; // <-- Import these functions
+import { getAnalytics, isSupported } from "firebase/analytics";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAWPmQOiA4eHBCidZQ9HCxOxEkFdTBQUFc",
@@ -37,7 +36,13 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+
+// Only initialize analytics if it's supported and we're on the client side
+let analytics;
+if (typeof window !== "undefined" && isSupported()) {
+  analytics = getAnalytics(app);
+}
+
 const db = getFirestore(app);
 
-export { db, collection, addDoc }; // <-- Export these functions
+export { db, collection, addDoc };

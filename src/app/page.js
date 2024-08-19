@@ -10,7 +10,6 @@ import { about, balls, experiences, projects, testimonials } from "./data";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 // firebase
 import { db } from './utils/firebase'
 import { collection, addDoc } from './utils/firebase'
@@ -156,20 +155,20 @@ export default function Home() {
       }
     });
 
-    gsap.fromTo(contactSection.current, {
-      opacity: 0,
-      y: -50,
-    }, {
-      opacity: 1,
-      y: 0,
-      duration: 1.5,
-      scrollTrigger: {
-        trigger: contactSection.current,
-        start: "top 90%",
-        end: "bottom 10%",
-        toggleActions: "play none none reset",
-      }
-    });
+    // gsap.fromTo(contactSection.current, {
+    //   opacity: 0,
+    //   y: -50,
+    // }, {
+    //   opacity: 1,
+    //   y: 0,
+    //   duration: 1.5,
+    //   scrollTrigger: {
+    //     trigger: contactSection.current,
+    //     start: "top 90%",
+    //     end: "bottom 10%",
+    //     toggleActions: "play none none reset",
+    //   }
+    // });
   }, []);
 
 
@@ -637,32 +636,6 @@ export default function Home() {
 
         <div className="w-10/12 m-auto flex flex-col md:flex-row items-center justify-center gap-20">
           <div className="w-full md:w-4/6 relative z-30">
-            {/* <form action="">
-              <div className="flex justify-between items-center gap-2 md:gap-8 mb-4">
-                <div className="flex flex-col items-start justify-center gap-1 w-6/12">
-                  <label htmlFor="firstName" className='text-white'>First Name</label>
-                  <input type="text" name="firstName" id="firstName" placeholder='First Name' className='h-12 w-full rounded-lg p-3 outline-none border-slate-400 border' required />
-                </div>
-                <div className="flex flex-col items-start justify-center gap-1 w-6/12">
-                  <label htmlFor="lastName" className='text-sm font-medium leading-6 text-white'>Last Name</label>
-                  <input type="text" name="lastName" id="lastName" placeholder='Last Name' className='h-12 w-full rounded-lg p-3 outline-none border-slate-400 border' required />
-                </div>
-              </div>
-
-              <div className="flex flex-col mb-4">
-                <label htmlFor="email" className='text-sm font-medium leading-6 text-white'>Email</label>
-                <input type="email" name="email" id="email" placeholder='Example@company.com' required className='h-12 w-full rounded-lg p-3 outline-none border-slate-400 border' />
-              </div>
-
-              <div className="flex flex-col mb-5">
-                <label htmlFor="message" className='text-sm font-medium leading-6 text-white'>Message</label>
-                <textarea name="message" id="message" placeholder='Write your query here...' className='h-40 w-full rounded-lg p-3 outline-none border-slate-400 border resize-none'></textarea>
-              </div>
-
-              <button className="btnBlue">
-                Send
-              </button>
-            </form> */}
             <form onSubmit={handleSubmit}>
               <div className="flex justify-between items-center gap-2 md:gap-8 mb-4">
                 <div className="flex flex-col items-start justify-center gap-1 w-6/12">
