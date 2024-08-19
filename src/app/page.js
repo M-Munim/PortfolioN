@@ -8,8 +8,6 @@ import { HiOutlineMail } from "react-icons/hi";
 // data
 import { about, balls, experiences, projects, testimonials } from "./data";
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 // firebase
 import { db } from './utils/firebase'
 import { collection, addDoc } from './utils/firebase'
@@ -185,10 +183,6 @@ export default function Home() {
     try {
       const docRef = await addDoc(collection(db, "formSubmissions"), formData);
       console.log("Document written with ID: ", docRef.id);
-
-      // Show Toastify notifications
-      toast.success('Message submitted');
-      toast.info('I will contact you later');
 
       // Clear form fields manually
       e.target.firstName.value = '';
@@ -664,7 +658,7 @@ export default function Home() {
             </form>
           </div>
         </div>
-        <ToastContainer />
+        {/* <ToastContainer /> */}
       </section >
 
       {/* gap */}
