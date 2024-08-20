@@ -42,8 +42,8 @@ const Footer = () => {
       <div className="flex flex-col items-center px-8 py-4">
         <div className="w-full flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
           <div className="flex items-center justify-center md:w-1/3">
-            {/* <Image src="/Logo.svg" alt="Logo" width={116} height={48} priority /> */}
-            <h2 className="text-white text-4xl tracking-widest"><code className="font-extrabold">MUNIM<small className="font-light text-lg tracking-normal">.dev</small></code></h2>
+            <Image src="/Logo2.svg" alt="Logo" width={146} height={48} priority />
+            {/* <h2 className="text-white text-4xl tracking-widest"><code className="font-extrabold">MUNIM<small className="font-light text-lg tracking-normal">.dev</small></code></h2> */}
           </div>
 
           <div className="flex md:flex-col flex-row items-center justify-center gap-x-3 md:w-1/3 space-y-1 capitalize flex-wrap">

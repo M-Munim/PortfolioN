@@ -102,20 +102,6 @@ export default function Home() {
       }
     });
 
-    gsap.fromTo(projectsSection.current, {
-      opacity: 0,
-      rotateY: 90,
-    }, {
-      opacity: 1,
-      rotateY: 0,
-      duration: 1.3,
-      scrollTrigger: {
-        trigger: projectsSection.current,
-        start: "top 90%",
-        end: "bottom 10%",
-        toggleActions: "play none none reset",
-      }
-    });
 
     gsap.fromTo(testimonialsSection.current,
 
@@ -152,21 +138,6 @@ export default function Home() {
         toggleActions: "play none none reset",
       }
     });
-
-    // gsap.fromTo(contactSection.current, {
-    //   opacity: 0,
-    //   y: -50,
-    // }, {
-    //   opacity: 1,
-    //   y: 0,
-    //   duration: 1.5,
-    //   scrollTrigger: {
-    //     trigger: contactSection.current,
-    //     start: "top 90%",
-    //     end: "bottom 10%",
-    //     toggleActions: "play none none reset",
-    //   }
-    // });
   }, []);
 
 
@@ -189,6 +160,7 @@ export default function Home() {
       e.target.lastName.value = '';
       e.target.email.value = '';
       e.target.message.value = '';
+      alert("Message Sent")
     } catch (e) {
       console.error("Error adding document: ", e);
     }

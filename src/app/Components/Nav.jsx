@@ -64,8 +64,8 @@ const Nav = () => {
       <div className="flex items-center justify-between h-20 px-4">
         <div className="logo w-1/6 flex items-center justify-center ">
           <Link href='/' >
-            {/* <Image src="Logo.svg" alt="Logo" width={116} height={48} priority /> */}
-            <h2 className="text-[#6966FF] tracking-widest sm:text-xl md:text-2xl lg:text-3xl"><code className="font-extrabold">MUNIM<small className="font-light text-lg tracking-normal text-[8px] sm:text-xs md:text-sm">.dev</small></code></h2>
+            <Image src="Logo.svg" alt="Logo" width={146} height={88} priority />
+            {/* <h2 className="text-[#6966FF] tracking-widest sm:text-xl md:text-2xl lg:text-3xl"><code className="font-extrabold">MUNIM<small className="font-light text-lg tracking-normal text-[8px] sm:text-xs md:text-sm">.dev</small></code></h2> */}
 
           </Link>
         </div>
