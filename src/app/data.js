@@ -81,7 +81,8 @@ export const projects = [
   }, {
     id: 3,
     img: '/HOSPITAL.png',
-    title: 'I developed a fully responsive landing page website using HTML, CSS, and JavaScript, designed to provide a seamless and engaging user experience.The site begins with a dynamic home section that features an eye- catching hero area, complete with a compelling call to action, ensuring visitors are immediately drawn in.The services section is carefully structured to showcase the various offerings, using visually appealing cards that highlight key details and benefits',
+    title: 'Premier Healthcare Services',
+    msg: 'I developed a fully responsive landing page website using HTML, CSS, and JavaScript, designed to provide a seamless and engaging user experience. The site begins with a dynamic home section that features an eye-catching hero area, complete with a compelling call to action, ensuring visitors are immediately drawn in. The services section is carefully structured to showcase the various offerings, using visually appealing cards that highlight key details and benefits.',
     link: 'https://m-munim.github.io/HospitalSiteScss/',
   }, {
     id: 4,
@@ -144,6 +145,20 @@ export const experiences = [
     id: 2,
     position: 'right',
     marginTop: 'mt-[50%]',
+    title: "WEB APPLICATION DEVELOPER",
+    company_name: "PHARMAPEDIA",
+    logo: '/logo.png',
+    date: "June 2024 - Present",
+    points: [
+      "Created a comprehensive web application from scratch using Next.js and Tailwind CSS for the front-end, ensuring a responsive and user-friendly interface that enhances the user experience.",
+      "Built and integrated robust backend APIs using Node.js and Express, facilitating seamless data management and communication between the client and server.",
+      "Ensured the web application is optimized for speed and scalability, employing best practices in code efficiency and implementing caching strategies to handle high traffic with minimal load times."
+    ],
+  },
+  {
+    id: 2,
+    position: 'left',
+    marginTop: 'mt-[50%]',
     title: "WEB DESIGN TRAINER",
     company_name: "EB LEARNING LAB",
     logo: '/eblearninglab.png',
@@ -155,7 +170,7 @@ export const experiences = [
   },
   {
     id: 3,
-    position: 'left',
+    position: 'right',
     title: "WEB DEVELOPER INTERN",
     company_name: "ENCODER BYTES PVT LTD (PSEB)",
     logo: '/encoderbytes.png',
@@ -167,6 +182,7 @@ export const experiences = [
       "Acquired basic knowledge and hands - on experience with React JS.",
     ],
   },
+
 
 ];
 
