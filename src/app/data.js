@@ -81,8 +81,7 @@ export const projects = [
   }, {
     id: 3,
     img: '/HOSPITAL.png',
-    title: 'Premier Healthcare Services',
-    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
+    title: 'I developed a fully responsive landing page website using HTML, CSS, and JavaScript, designed to provide a seamless and engaging user experience.The site begins with a dynamic home section that features an eye- catching hero area, complete with a compelling call to action, ensuring visitors are immediately drawn in.The services section is carefully structured to showcase the various offerings, using visually appealing cards that highlight key details and benefits',
     link: 'https://m-munim.github.io/HospitalSiteScss/',
   }, {
     id: 4,
