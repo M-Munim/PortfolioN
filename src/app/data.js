@@ -4,8 +4,8 @@ export const about = [
     img: '/front.png',
     // img: '/web2.png',
     // img: '/web.png',
-    title: 'Front End Development',
-    text: "Website Application Developer with over 1 year of experience, proficient in HTML, CSS, Tailwind CSS, JS, React JS, Redux, Material UI, Shadcn UI, React Bootstrap, Next JS, Firebase, and WordPress.Detail - oriented, quick learner, and eager to contribute to cutting- edge web experiences.Ready to collaborate in crafting appealing, responsive websites with a talented team."
+    title: 'Website Application Development',
+    text: "Web Developer with over 1 year of experience specializing in creating responsive, user-friendly web applications. Proficient in HTML, CSS, JavaScript, React JS, Next JS, Tailwind CSS, WordPress, and Google Sites.Adept at using modern frameworks and tools to enhance user experience and optimize performance. Demonstrated ability to deliver high- quality projects on time, with a proven track record of improving user engagement and satisfaction.Strong focus on client needs and continuous learning to stay updated with the latest web development trends."
   },
   {
     id: 2,
@@ -70,13 +70,13 @@ export const projects = [
     id: 1,
     img: '/pharmapedia.png',
     title: 'Pharmapedia Web',
-    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
+    msg: 'Enhanced a front- end medical website with Next.js, JSX, and Tailwind CSS, boosting user engagement by 30 %.This upgrade enabled product browsing, app downloads, and blog reading, increasing site interactions by 25 %.I implemented a responsive, user - friendly design, improving user satisfaction by 20 %, and integrated intuitive search functionality, reducing search time by 15 %.Coordinated effectively using Git for smooth project management.',
     link: 'https://pharmapedia-web.vercel.app/',
   }, {
     id: 2,
     img: '/kisanHTML.png',
     title: 'Green Pakistan Kisan Rehbar',
-    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
+    msg: 'I developed a responsive website for Green Pakistan Kisan Rehbar Enterprise Limited, a leading plantation company. Utilizing HTML, CSS, Bootstrap, and JavaScript, I designed a modern and user-friendly interface where the company can effectively showcase their progress, highlight new projects, introduce team members, and display their portfolio. The website is optimized for all devices, ensuring a seamless experience for users on desktops, and smartphones.',
     link: 'https://encoderbytes.github.io/plantationSIte/',
   }, {
     id: 3,
@@ -86,28 +86,28 @@ export const projects = [
     link: 'https://m-munim.github.io/HospitalSiteScss/',
   }, {
     id: 4,
-    img: '/eblearninglabProj.png',
-    title: 'Eb Learning Lab',
-    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
-    link: 'https://eblearninglab.com/',
+    img: '/Poha.png',
+    title: 'POHA',
+    msg: 'Are you looking for an innovative digital learning solution for your school? Look no further. I have developed POHA Digital Learning Solution—a cutting-edge web application using ReactJS, Tailwind CSS, Node JS, Express JS, and Mongo DB.',
+    link: '',
   }, {
     id: 5,
     img: '/MAHAZ.png',
     title: 'Mahaz Edu System',
-    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
+    msg: 'Developed a sophisticated front-end web application using HTML5, CSS3, JavaScript, and Bootstrap. This application serves as a SaaS platform designed specifically for educational institutions and academies. Below are the key features and functionalities:',
     link: 'https://m-munim.github.io/Mahaz-Educa-Systems-Pak/',
   }, {
     id: 6,
     img: '/dietmate.png',
     title: 'Dietmate AI',
-    msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
+    msg: 'I developed an AI-powered diet companion using JSX, Next.js, and Tailwind CSS. The app features a sleek interface that asks personalized questions to provide tailored dietary advice. Users can easily save their results as a PDF, making healthy eating convenient and accessible. This project highlights my expertise in creating responsive, user-centric applications with a modern touch.',
     link: 'https://diet-ai.vercel.app/',
   }, {
     id: 7,
-    img: '/Poha.png',
-    title: 'POHA',
+    img: '/eblearninglabProj.png',
+    title: 'Eb Learning Lab',
     msg: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit nostrum deleniti alias doloremque magni dolorem ullam molestias recusandae possimus hic.',
-    link: '',
+    link: 'https://eblearninglab.com/',
   }, {
     id: 8,
     img: '/realState.png',
@@ -128,7 +128,7 @@ export const experiences = [
     id: 1,
     position: 'left',
     marginTop: 'mt-5',
-    title: "JUNIOR FRONT-END DEVELOPER",
+    title: "FRONT-END DEVELOPER",
     company_name: "ENCODER BYTES PVT LTD",
     logo: '/encoderbytes.png',
     // date: "Dec 2023 - July 2024",
@@ -150,8 +150,8 @@ export const experiences = [
     logo: '/eblearninglab.png',
     date: "Sep 2023 - Nov 2023",
     points: [
-      "Offered mentoring sessions and practical programming training classes on website designing tailored specifically for the youth of Pakistan and Afghanistan.",
-      "Technologies: HTML, CSS, Bootstrap, Git & Github, Basic Javascript",
+      "Offered mentoring sessions and conducted practical programming training classes on website designing for over 50 youth participants from Pakistan and Afghanistan, receiving a 95% satisfaction rating.",
+      "Organized and facilitated interactive workshops and coding challenges, fostering a collaborative learning environment and improving participants’ problem-solving skills",
     ],
   },
   {

@@ -4,6 +4,9 @@ import Image from 'next/image';
 import { FaGithub } from "react-icons/fa";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { HiOutlineMail } from "react-icons/hi";
+import { PiStrategyBold } from "react-icons/pi";
+import { RxUpdate } from "react-icons/rx";
+import { MdOutlineRocketLaunch } from "react-icons/md";
 
 // data
 import { about, balls, experiences, projects, testimonials } from "./data";
@@ -167,7 +170,7 @@ export default function Home() {
   };
 
   return (
-    <main className=''>
+    <main className='scrollbar-custom'>
       {/* hero */}
       <section className="home bg-[#252536] w-full pt-24 pb-5" id='home'>
         <div className="w-10/12 m-auto relative">
@@ -250,7 +253,7 @@ export default function Home() {
           </div>
 
           <div className="w-full lg:w-7/12 mb-10">
-            <p className="leading-5 text-white opacity-70 text-justify text-sm md:text-base">I'am a skilled front-end developer with experience in Javascript, and expertise in frameworks like React, Next.js. I am a quick learner and collaborate closely with clients to create efficeint, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life.</p>
+            <p className="leading-5 text-white opacity-70 text-justify text-sm md:text-base">I'am a skilled Website Application Developer with experience in Javascript, and expertise in frameworks like React, Next.js. I am a quick learner and collaborate closely with clients to create efficeint, scalable, and user-friendly solutions that solve real-world problems. Let's work together to bring your ideas to life.</p>
 
             <div className="links flex items-center justify-start text-2xl gap-2 mt-3 text-white">
               <a href="https://www.linkedin.com/in/m-munim1/" target='_blank' className='hover:scale-110 transition-all'>
@@ -405,7 +408,10 @@ export default function Home() {
               <div className="cards flex items-center justify-center gap-x-4 w-full text-white flex-wrap mt-2">
                 <div className="w-[360px] md:w-[340px] lg:w-[410px] h-72 bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all border-b-2 p-3 flex items-center justify-center mt-3">
                   <div className="">
-                    <h2 className="font-bold text-xl mb-5">Planning & Strategy</h2>
+                    <div className="flex items-center justify-start gap-2 mb-5">
+                      <h2 className="font-bold text-xl">Planning & Strategy</h2>
+                      <PiStrategyBold />
+                    </div>
                     <p className="text-sm text-justify">We'll colaborate to map out your website's goal, target audience and key functionalities. We'll discuss things like site structure, navigation and content requirements.</p>
                   </div>
                 </div>
@@ -413,7 +419,10 @@ export default function Home() {
                 <Image src="/Frame.svg" alt="Frame" width={90} height={118} className="approachImg mt-5 block me-auto" />
                 <div className="w-[360px] md:w-[340px] lg:w-[410px] h-72 bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all border-b-2 p-3 flex items-center justify-center mt-3">
                   <div className="">
-                    <h2 className="font-bold text-xl mb-5">Development & Updates</h2>
+                    <div className="flex items-center justify-start gap-2 mb-5">
+                      <h2 className="font-bold text-xl">Development & Updates</h2>
+                      <RxUpdate />
+                    </div>
                     <p className="text-sm text-justify">Once we agree on the plan, I cue my lofi playlist and dive into problem solving & coding. From initial sketches to polished code, I keep you updated every step of the way.</p>
                   </div>
                 </div>
@@ -426,7 +435,10 @@ export default function Home() {
                 />
                 <div className="w-[360px] md:w-[340px] lg:w-[410px] h-72 bg-[#2d2d41] hover:bg-[#2d2d41c3] transition-all border-b-2 p-3 flex items-center justify-center mt-3">
                   <div className="">
-                    <h2 className="font-bold text-xl mb-5">Development & Launch</h2>
+                    <div className="flex items-center justify-start gap-2 mb-5">
+                      <h2 className="font-bold text-xl">Development & Launch</h2>
+                      <MdOutlineRocketLaunch />
+                    </div>
                     <p className="text-sm text-justify">This is where the magic happens! Based on the approved design, I'll translate everthing into functional code, bulding your website from the ground up.</p>
                   </div>
                 </div>
@@ -538,6 +550,7 @@ export default function Home() {
             <Image src='/teachRica.svg' width={92} height={92} alt="companies" className='' />
             <Image src='/smit.png' width={92} height={92} alt="companies" className='' />
             <Image src='/eblearninglab.png' width={92} height={92} alt="companies" className='' />
+            <Image src='/logo.png' width={92} height={92} alt="companies" className='' />
           </div>
         </div>
       </section >

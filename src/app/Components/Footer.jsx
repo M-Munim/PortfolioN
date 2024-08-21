@@ -47,7 +47,7 @@ const Footer = () => {
           </div>
 
           <div className="flex md:flex-col flex-row items-center justify-center gap-x-3 md:w-1/3 space-y-1 capitalize flex-wrap">
-            {['/', '#about', '#work', '#hire me', '#projects', '#testimonials'].map((href, index) => (
+            {['/', '#about', '#work', '#hire-me', '#projects', '#testimonials'].map((href, index) => (
               <motion.div key={index} variants={linkVariants} whileHover="hover">
                 <Link href={href}>{href.substring(1) || 'Home'}</Link>
               </motion.div>
@@ -60,14 +60,14 @@ const Footer = () => {
             <div className="flex items-center justify-center text-2xl gap-2">
               {[
                 { href: "https://www.linkedin.com/in/m-munim1/", icon: <IoLogoLinkedin /> },
-                { href: "https://github.com/M-Munim" , icon: <FaGithub /> },
+                { href: "https://github.com/M-Munim", icon: <FaGithub /> },
                 { href: "https://instagram.com/munim_.1?igshid=NGExMmI2YTkyZg==", icon: <FaInstagram /> },
                 { href: "https://twitter.com/Muhamma09747531?t=ifDBNBwXuIEsikE8pQR3YQ&s=09", icon: <FaSquareXTwitter /> },
                 { href: "mailto:muhammadmunimoff330@gmail.com", icon: <HiOutlineMail /> },
                 { href: "https://wa.me/923302021926", icon: <FaSquareWhatsapp /> },
               ]
                 .map((social, index) => (
-                  <motion.a key={index} href={social.href} variants={socialLinkVariants} whileHover="hover"  target="_blank" >
+                  <motion.a key={index} href={social.href} variants={socialLinkVariants} whileHover="hover" target="_blank" >
                     {social.icon}
                   </motion.a>
                 ))

@@ -62,14 +62,14 @@ const Nav = () => {
   return (
     <nav className="bg-[#252536] w-full fixed z-50">
       <div className="flex items-center justify-between h-20 px-4">
-        <div className="logo w-1/6 flex items-center justify-center ">
+        <div className="logo w-2/6 md:w-1/6 flex items-center justify-center">
           <Link href='/' >
-            <Image src="Logo.svg" alt="Logo" width={146} height={88} priority />
+            <Image src="Logo.svg" alt="Logo" width={100} height={100} className="w-56 md:w-56" priority />
             {/* <h2 className="text-[#6966FF] tracking-widest sm:text-xl md:text-2xl lg:text-3xl"><code className="font-extrabold">MUNIM<small className="font-light text-lg tracking-normal text-[8px] sm:text-xs md:text-sm">.dev</small></code></h2> */}
 
           </Link>
         </div>
-        <div className="hidden md:flex items-center justify-end gap-5 w-5/6">
+        <div className="hidden md:flex items-center justify-end gap-5 w-4/6 md:w-5/6">
           <div className="links text-white flex items-center gap-4 md:gap-5 capitalize text-[15px] lg:text-lg">
             {['#home', '#about', '#work', '#projects', '#testimonials', '#hire-me'].map((href, index) => (
               <motion.div key={index} variants={linkVariants} whileHover="hover">

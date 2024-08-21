@@ -17,6 +17,8 @@
 
 body {
   background-color: #232334;
+
+  overflow-y: scroll;
 }
 
 .btnBlue {
@@ -279,4 +281,34 @@ body {
       -1.8em 1.8em 0 0em rgba(255, 255, 255, 0.5),
       -2.6em 0em 0 0em rgba(255, 255, 255, 0.7), -1.8em -1.8em 0 0em #ffffff;
   }
+}
+
+
+/* Custom scrollbar for Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+  /* Width of the scrollbar */
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background: #252536;
+  /* Background color of the scrollbar track */
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6966FF;
+  /* Color of the scrollbar thumb */
+  border-radius: 10px;
+  /* Rounded corners for the scrollbar thumb */
+  cursor: pointer;
+}
+
+/* Custom scrollbar for Firefox */
+.scrollbar-custom {
+  scrollbar-width: thin;
+  /* Width of the scrollbar */
+  scrollbar-color: #6966FF #252536;
+  /* Color of the scrollbar thumb and track */
 }
