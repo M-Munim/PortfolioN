@@ -3,6 +3,7 @@ import "./globals.css";
 import Nav from "./Components/Nav";
 import Footer from "./Components/Footer";
 import { Providers } from "./providers";
+import Script from 'next/script';  // Import Script to load Google Analytics
 
 const inter = Inter({ subsets: ["latin"] });
 
